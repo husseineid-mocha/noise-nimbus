@@ -1,0 +1,117 @@
+html {
+    background: rgb(240, 240, 240);
+    margin: 0;
+    padding: 0;
+}
+
+.splash {
+    background: white;
+    width: 1240px;
+    height: auto;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    min-width: 1240px;
+    position: relative;
+}
+
+.splash-top-line {
+    background: rgb(207, 0, 114);
+    height: 5px;
+}
+
+.splash-banner-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.splash-banner-left {
+    height: 32px;
+}
+
+.splash-banner-left img {
+    height: 50px;
+}
+
+.splash-banner-right {
+    display: flex;
+}
+
+.splash-banner-right button {
+    padding: 3px;
+    border-radius: 4px;
+    margin-right: 9px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 31px;
+    font-size: 14px;
+}
+
+.splash-banner {
+    background: rgb(193, 140, 157);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 430px;
+    padding-top: 19px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.splash-login {
+    margin-right: 7px;
+    background: transparent;
+    border: 1px solid rgb(36, 36, 36);
+    border-radius: 5px;
+    color: rgb(36, 36, 36);
+}
+
+.splash-signup {
+    background: rgb(207, 0, 114);
+    color: white;
+    border: 1px solid rgb(207, 0, 114);
+}
+
+.splash-banner-center {
+    margin-left: 72px;
+    text-align: center;
+    width: 70%;
+    margin-top: 100px;
+}
+
+.splash-banner-center h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: rgb(36, 36, 36);
+    font-weight: 500;
+}
+
+.splash-banner-center p {
+    width: 63%;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-bottom: 29px;
+    line-height: 1.5;
+}
+
+.large-button-transparent {
+    background: transparent;
+    font-family: "Open Sans", sans-serif;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+    padding: 11.5px 36px;
+    margin-right: 25px;
+    font-size: 18px;
+    font-weight: 350;
+}
+
+.large-button-orange {
+    background: rgb(207, 0, 114);
+    color: white;
+    border: 1px solid rgb(207, 0, 114);
+    border-radius: 3px;
+    padding: 13px 68px;
+    font-size: 18px;
+    font-weight: 350;
+    height: 47px;
+}
