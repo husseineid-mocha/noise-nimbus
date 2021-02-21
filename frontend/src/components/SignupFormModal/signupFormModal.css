@@ -1,0 +1,51 @@
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 400px;
+    /* height: 500px; */
+    margin: 0 auto;
+    top: 8%;
+    padding: 25px;
+    padding-top: 0px;
+    animation-name: scrolldown;
+    animation-duration: 0.5s;
+}
+
+input.input {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 7px 8px;
+    border-radius: 5px;
+    width: 380px;
+    margin-bottom: 20px;
+}
+
+button.signup-button {
+    background: rgb(207, 0, 114);
+    color: white;
+    border: 1px solid rgb(207, 0, 114);
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px 15px;
+    height: 40px;
+    border-radius: 3px;
+    margin-bottom: 23px;
+    margin-top: 4px;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+    transform: translateX(-100px);
+}

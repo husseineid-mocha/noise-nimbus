@@ -1,16 +1,26 @@
 import "./splash.css";
-import logo from "./soundcloud-512.png";
+import logo from "./white-logo.png";
 import React, { useState } from "react";
 import { Modal } from "../../context/Modal";
-import { useSelector } from "react-redux";
-import LoginFormModal from "../LoginFormModal";
-import SignupFormModal from "../SignupFormModal";
+import { useSelector, useDispatch } from "react-redux";
+import LoginForm from "../LoginFormModal/LoginForm";
 import SignupForm from "../SignupFormModal/SignupForm";
 import ProfileButton from "../Navigation/ProfileButton";
+import { activateLogin } from "../../store/loginModal";
+import { activateSignUp } from "../../store/signupModal";
 
 function Splash({ isLoaded }) {
+  const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector((state) => state.session.user);
+
+  function modalIsOpenSignUp() {
+    dispatch(activateSignUp());
+  }
+
+  function modalIsOpenLogin() {
+    dispatch(activateLogin());
+  }
 
   let sessionLinks;
   if (sessionUser) {
@@ -18,8 +28,18 @@ function Splash({ isLoaded }) {
   } else {
     sessionLinks = (
       <>
-        <LoginFormModal />
-        <SignupFormModal />
+        <div>
+          <button onClick={() => modalIsOpenLogin()} className="splash-login">
+            Log In
+          </button>
+          <LoginForm />
+        </div>
+        <div>
+          <button onClick={() => modalIsOpenSignUp()} className="splash-signup">
+            Sign Up
+          </button>
+          <SignupForm />
+        </div>
       </>
     );
   }
@@ -49,15 +69,10 @@ function Splash({ isLoaded }) {
             </a>
             <button
               className="large-button-orange"
-              onClick={() => setShowModal(true)}
+              onClick={() => modalIsOpenSignUp()}
             >
               Try it Free
             </button>
-            {showModal && (
-              <Modal onClose={() => setShowModal(false)}>
-                <SignupForm />
-              </Modal>
-            )}
           </div>
 
           <div className="splash-banner-right">{isLoaded && sessionLinks}</div>
