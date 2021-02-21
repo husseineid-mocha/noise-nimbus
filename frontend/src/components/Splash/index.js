@@ -1,3 +1,4 @@
+import "./splash.css";
 import logo from "./soundcloud-512.png";
 import React, { useState } from "react";
 import { Modal } from "../../context/Modal";
@@ -6,9 +7,6 @@ import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
 import SignupForm from "../SignupFormModal/SignupForm";
 import ProfileButton from "../Navigation/ProfileButton";
-import "./splash.css";
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Splash({ isLoaded }) {
   const [showModal, setShowModal] = useState(false);
@@ -65,6 +63,21 @@ function Splash({ isLoaded }) {
           <div className="splash-banner-right">{isLoaded && sessionLinks}</div>
         </div>
       </div>
+
+      <div className="splash-search">
+        <input
+          className="splash-search-input"
+          type="text"
+          placeholder="Search for artists, bands, tracks, podcasts"
+        />
+        <button>
+          <i className="fas fa-search"></i>
+        </button>
+        <p>or</p>
+        <button className="splash-search-button">Upload your own</button>
+      </div>
+
+      <div></div>
     </div>
   );
 }

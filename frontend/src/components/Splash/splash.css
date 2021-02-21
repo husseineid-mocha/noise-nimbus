@@ -115,3 +115,59 @@ html {
     font-weight: 350;
     height: 47px;
 }
+
+
+/* SEARCH */
+
+.splash-search {
+    display: flex;
+    justify-content: center;
+    line-height: 1.7;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.splash-search input {
+    background: rgb(240, 240, 240);
+    width: 520px;
+    border: none;
+    height: 45px;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    border-radius: 3px 0 0 3px;
+}
+
+.splash-search input::placeholder {
+    color: rgb(165, 165, 165);
+}
+
+.splash-search>button {
+    background: rgb(240, 240, 240);
+    margin-right: 18px;
+    border: none;
+    height: 45px;
+    width: 50px;
+    font-size: 19px;
+    color: gray;
+    border-radius: 0 3px 3px 0;
+}
+
+.splash-search button:last-child {
+    margin: 0;
+    margin-left: 18px;
+    background: rgb(207, 0, 114);
+    color: white;
+    border: 1px solid rgb(207, 0, 114);
+    border-radius: 3px;
+    width: auto;
+    font-size: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.splash-search p {
+    line-height: 2.5;
+    font-size: 16px;
+}

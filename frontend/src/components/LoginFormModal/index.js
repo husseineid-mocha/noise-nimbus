@@ -6,7 +6,7 @@ function LoginFormModal() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <>
+    <div>
       <button className="splash-login" onClick={() => setShowModal(true)}>
         Log In
       </button>
@@ -15,7 +15,7 @@ function LoginFormModal() {
           <LoginForm />
         </Modal>
       )}
-    </>
+    </div>
   );
 }
 
