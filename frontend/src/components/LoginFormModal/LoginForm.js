@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "react-modal";
@@ -20,6 +21,7 @@ const customStyles = {
 
 function LoginForm() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const loginState = useSelector((state) => state.modal.login);
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
@@ -28,6 +30,22 @@ function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
+    // fetch("/api/session", {
+    //   method: "POST",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     credential,
+    //     password,
+    //   }),
+    // })
+    //   .then((j) => j.json())
+    //   .then((result) => {
+    //     sessionStorage.setItem("token", result.token);
+    //     localStorage.setItem("user", JSON.stringify(result.user));
+    //     history.push("/dashboard");
+    //   });
     return dispatch(sessionActions.login({ credential, password })).catch(
       async (res) => {
         const data = await res.json();
@@ -80,14 +98,14 @@ function LoginForm() {
             />
           </label>
           <button className="login-button" type="submit">
-            Log In
+            Sign In
           </button>
           <button
             className="demo-login-button"
             type="button"
             onClick={demoSubmit}
           >
-            Demo Log in
+            Demo Sign In
           </button>
         </form>
         {/* <form onSubmit={demoSubmit}>

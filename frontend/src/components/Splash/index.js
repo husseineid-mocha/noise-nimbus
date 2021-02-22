@@ -1,8 +1,8 @@
 import "./splash.css";
 import logo from "./white-logo.png";
 import mobile from "./mobile.jpg";
-import React, { useState } from "react";
-import { Modal } from "../../context/Modal";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import LoginForm from "../LoginFormModal/LoginForm";
 import SignupForm from "../SignupFormModal/SignupForm";
@@ -15,8 +15,15 @@ import Carousel from "../Carousel";
 
 function Splash({ isLoaded }) {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector((state) => state.session.user);
+
+  useEffect(() => {
+    if (sessionUser) {
+      history.push("/dashboard");
+    }
+  }, [sessionUser]);
 
   function modalIsOpenSignUp() {
     dispatch(activateSignUp());
@@ -34,13 +41,13 @@ function Splash({ isLoaded }) {
       <>
         <div>
           <button onClick={() => modalIsOpenLogin()} className="splash-login">
-            Log In
+            Sign in
           </button>
           <LoginForm />
         </div>
         <div>
           <button onClick={() => modalIsOpenSignUp()} className="splash-signup">
-            Sign Up
+            Create account
           </button>
           <SignupForm />
         </div>
@@ -59,30 +66,10 @@ function Splash({ isLoaded }) {
             <img src={logo}></img>
           </div>
 
-          {/* <h2 className="splash-header">
-              Discover more with NoiseNimbus Go+
-            </h2>
-            <p className="splash-header-p">
-              Upload your first track and begin your journey. NoiseNimbus gives
-              you space to create, listen, and connect with other artists.
-            </p>
-            <a
-              href="https://github.com/husseineid-mocha"
-              className="large-button-transparent"
-            >
-              Meet the creator
-            </a>
-            <button
-              className="large-button-orange"
-              onClick={() => modalIsOpenSignUp()}
-            >
-              Try it Free
-            </button> */}
-
           <div className="splash-banner-right">{isLoaded && sessionLinks}</div>
         </div>
-        <div>
-          <Carousel className="carousel" />
+        <div className="overflow-hidden position-relative">
+          <Carousel />
         </div>
       </div>
 

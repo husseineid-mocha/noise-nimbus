@@ -103,7 +103,7 @@ function SignupForm() {
             />
           </label>
           <button className="signup-button" type="submit">
-            Sign Up
+            Create account
           </button>
         </form>
       </Modal>

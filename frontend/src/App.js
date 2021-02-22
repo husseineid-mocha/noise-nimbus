@@ -21,6 +21,10 @@ function App() {
           <Route exact path="/">
             <Splash isLoaded={isLoaded} />
           </Route>
+          <Route path="/dashboard">
+            <p>dashboard</p>
+            {/* <Splash isLoaded={isLoaded} /> */}
+          </Route>
         </Switch>
       )}
     </>

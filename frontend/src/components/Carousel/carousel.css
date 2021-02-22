@@ -6,12 +6,13 @@
 }
 
 .carousel {
-    width: 303.2%;
-    height: 100%;
-    transform: translateX(-33%);
+    width: 300%;
+    height: 450px;
+    transform: translateX(-33.3%);
     overflow: hidden;
     display: flex;
     transition: 1s ease;
+    font-family: "Open Sans", sans-serif;
 }
 
 .carousel-button-container {
@@ -34,18 +35,58 @@
 
 .carousel-button-active {
     background: rgb(255, 255, 255);
-    /* width: 10px;
+    width: 10px;
     height: 10px;
     background: black;
     border-radius: 6px;
     border: 1px solid #fff;
     cursor: pointer;
-    margin: 0px 2px; */
+    margin: 0px 2px;
 }
 
 .carousel-item {
-    background-image: url(https://via.placeholder.com/1240x450);
+    /* background-image: url(https://via.placeholder.com/1240x450); */
+    background-size: cover;
     background-position: center;
     height: 450px;
-    width: 33%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.splash-carousel-center {
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+    margin-top: -20px;
+}
+
+.splash-carousel-center h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 500;
+}
+
+.splash-carousel-center p {
+    width: 63%;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-bottom: 29px;
+    line-height: 1.5;
+    color: white;
+}
+
+.upload-button {
+    background: rgb(207, 0, 114);
+    color: white;
+    border: 1px solid rgb(207, 0, 114);
+    border-radius: 3px;
+    padding: 13px 38px;
+    font-size: 18px;
+    font-weight: 350;
+    height: 47px;
+    cursor: pointer;
 }
