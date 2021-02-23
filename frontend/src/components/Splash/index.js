@@ -10,6 +10,7 @@ import ProfileButton from "../Navigation/ProfileButton";
 import { activateLogin } from "../../store/modal";
 import { activateSignUp } from "../../store/modal";
 import Carousel from "../Carousel";
+import { songs } from "../../store/songs";
 // import Slider from "../Carousel3";
 // import Cagain from "../CarouselAgain";
 
@@ -18,12 +19,18 @@ function Splash({ isLoaded }) {
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector((state) => state.session.user);
+  const songsState = useSelector((state) => state.song);
+  console.log(songsState);
 
   useEffect(() => {
     if (sessionUser) {
       history.push("/dashboard");
     }
   }, [sessionUser]);
+
+  useEffect(() => {
+    dispatch(songs());
+  }, []);
 
   function modalIsOpenSignUp() {
     dispatch(activateSignUp());
@@ -90,6 +97,11 @@ function Splash({ isLoaded }) {
         <div className="splash-trending-container">
           <h3>Hear what's trending in the NoiseNimbus community</h3>
           <div className="splash-trending-tracks">
+            <div>
+              {songsState.map((song) => (
+                <li>{song.image}</li>
+              ))}
+            </div>
             <button
               className="splash-trending-button"
               // onClick={() => modalIsOpenSignUp()}

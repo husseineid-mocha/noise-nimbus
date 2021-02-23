@@ -16,6 +16,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT,
       },
+      image: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
       audioFile: {
         allowNull: false,
         type: Sequelize.STRING,
@@ -29,11 +33,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: { model: "Artists" },
-      },
-      albumId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: { model: "Albums" },
       },
       createdAt: {
         allowNull: false,

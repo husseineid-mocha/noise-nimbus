@@ -88,8 +88,8 @@ const Carousel = () => {
       {/* // </div> */}
       <div className="carousel-button-container">
         <CarouselButton activeIndex={index} index={0} onClick={setIndex} />
-        <CarouselButton activeIndex={index} index={0} onClick={setIndex} />
-        <CarouselButton activeIndex={index} index={0} onClick={setIndex} />
+        <CarouselButton activeIndex={index} index={1} onClick={setIndex} />
+        <CarouselButton activeIndex={index} index={2} onClick={setIndex} />
       </div>
     </>
   );
@@ -98,9 +98,8 @@ const Carousel = () => {
 const CarouselButton = ({ activeIndex, index, onClick }) => (
   <div
     className={
-      "carousel-button " + (activeIndex === index)
-        ? "carousel-button-active"
-        : ""
+      "carousel-button " +
+      (activeIndex === index ? "carousel-button-active" : "")
     }
     onClick={() => onClick(index)}
   />
