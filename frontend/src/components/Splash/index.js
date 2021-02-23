@@ -11,6 +11,7 @@ import { activateLogin } from "../../store/modal";
 import { activateSignUp } from "../../store/modal";
 import Carousel from "../Carousel";
 import { songs } from "../../store/songs";
+import SongsContainer from "../SongsContainer";
 // import Slider from "../Carousel3";
 // import Cagain from "../CarouselAgain";
 
@@ -96,10 +97,10 @@ function Splash({ isLoaded }) {
       <div>
         <div className="splash-trending-container">
           <h3>Hear what's trending in the NoiseNimbus community</h3>
-          <div className="splash-trending-tracks">
-            <div>
+          <div>
+            <div className="splash-trending-tracks">
               {songsState.map((song) => (
-                <li>{song.image}</li>
+                <SongsContainer song={song} />
               ))}
             </div>
             <button

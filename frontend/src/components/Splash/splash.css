@@ -1,415 +1,415 @@
 html {
-    background: rgb(240, 240, 240);
-    margin: 0;
-    padding: 0;
-    margin: -0.6%;
+  background: rgb(240, 240, 240);
+  margin: 0;
+  padding: 0;
+  margin: -0.6%;
 }
 
 .splash {
-    background: white;
-    width: 1240px;
-    height: auto;
-    margin: 0 auto;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    min-width: 1240px;
-    position: relative;
+  background: white;
+  width: 1240px;
+  height: auto;
+  margin: 0 auto;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  min-width: 1240px;
+  position: relative;
 }
 
 .position-absolute {
-    position: absolute;
+  position: absolute;
 }
 
 .position-relative {
-    position: relative;
+  position: relative;
 }
 
 .overflow-hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .splash-top-line {
-    background: rgb(207, 0, 114);
-    height: 6px;
+  background: rgb(207, 0, 114);
+  height: 6px;
 }
 
 .splash-banner-navbar {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    z-index: 2;
-    width: 1240px;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  width: 1240px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .splash-banner-left {
-    height: 32px;
+  height: 32px;
 }
 
 .splash-banner-left img {
-    height: 50px;
+  height: 50px;
 }
 
 .splash-banner-right {
-    display: flex;
+  display: flex;
 }
 
 .splash-banner-right button {
-    padding: 3px;
-    border-radius: 4px;
-    margin-right: 9px;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 31px;
-    font-size: 14px;
-    cursor: pointer;
+  padding: 3px;
+  border-radius: 4px;
+  margin-right: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 31px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .splash-banner {
-    background: rgb(193, 140, 157);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 450px;
-    /* padding-top: 19px;
+  background: rgb(193, 140, 157);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 450px;
+  /* padding-top: 19px;
     padding-left: 30px;
     padding-right: 30px; */
 }
 
 .splash-login {
-    margin-right: 7px;
-    background: transparent;
-    border: 1px solid rgb(255 255 255);
-    border-radius: 5px;
-    color: rgb(255 255 255);
+  margin-right: 7px;
+  background: transparent;
+  border: 1px solid rgb(255 255 255);
+  border-radius: 5px;
+  color: rgb(255 255 255);
 }
 
 .splash-signup {
-    background: rgb(207, 0, 114);
-    color: white;
-    border: 1px solid rgb(207, 0, 114);
+  background: rgb(207, 0, 114);
+  color: white;
+  border: 1px solid rgb(207, 0, 114);
 }
 
 .splash-banner-center {
-    margin-left: 72px;
-    text-align: center;
-    width: 70%;
-    margin-top: 100px;
+  margin-left: 72px;
+  text-align: center;
+  width: 70%;
+  margin-top: 100px;
 }
 
 .splash-banner-center h2 {
-    font-size: 35px;
-    margin-bottom: 15px;
-    color: rgb(36, 36, 36);
-    font-weight: 500;
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: rgb(36, 36, 36);
+  font-weight: 500;
 }
 
 .splash-banner-center p {
-    width: 63%;
-    height: 50px;
-    margin: 0 auto;
-    font-size: 17px;
-    margin-bottom: 29px;
-    line-height: 1.5;
+  width: 63%;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 17px;
+  margin-bottom: 29px;
+  line-height: 1.5;
 }
 
 .large-button-transparent {
-    background: transparent;
-    font-family: "Open Sans", sans-serif;
-    border: 1px solid white;
-    color: white;
-    border-radius: 3px;
-    padding: 11.5px 36px;
-    margin-right: 25px;
-    font-size: 18px;
-    font-weight: 350;
-    cursor: pointer;
-    text-decoration: none;
+  background: transparent;
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid white;
+  color: white;
+  border-radius: 3px;
+  padding: 11.5px 36px;
+  margin-right: 25px;
+  font-size: 18px;
+  font-weight: 350;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .large-button-orange {
-    background: rgb(207, 0, 114);
-    color: white;
-    border: 1px solid rgb(207, 0, 114);
-    border-radius: 3px;
-    padding: 13px 68px;
-    font-size: 18px;
-    font-weight: 350;
-    height: 47px;
-    cursor: pointer;
+  background: rgb(207, 0, 114);
+  color: white;
+  border: 1px solid rgb(207, 0, 114);
+  border-radius: 3px;
+  padding: 13px 68px;
+  font-size: 18px;
+  font-weight: 350;
+  height: 47px;
+  cursor: pointer;
 }
-
 
 /* SEARCH */
 
 .splash-search {
-    display: flex;
-    justify-content: center;
-    line-height: 20px;
-    margin-top: 30px;
-    align-items: center;
-    padding-top: 12px;
+  display: flex;
+  justify-content: center;
+  line-height: 20px;
+  margin-top: 30px;
+  align-items: center;
+  padding-top: 12px;
 }
 
 .splash-search input {
-    background: rgb(240, 240, 240);
-    width: 520px;
-    border: none;
-    height: 45px;
-    padding: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 16px;
-    border-radius: 3px 0 0 3px;
+  background: rgb(240, 240, 240);
+  width: 520px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  border-radius: 3px 0 0 3px;
 }
 
 .splash-search input::placeholder {
-    color: rgb(165, 165, 165);
+  color: rgb(165, 165, 165);
 }
 
-.splash-search>button {
-    background: rgb(240, 240, 240);
-    margin-right: 18px;
-    border: none;
-    height: 45px;
-    width: 50px;
-    font-size: 19px;
-    color: gray;
-    border-radius: 0 3px 3px 0;
-    cursor: pointer;
+.splash-search > button {
+  background: rgb(240, 240, 240);
+  margin-right: 18px;
+  border: none;
+  height: 45px;
+  width: 50px;
+  font-size: 19px;
+  color: gray;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
 }
 
 .splash-search button:last-child {
-    margin: 0;
-    margin-left: 18px;
-    background: rgb(207, 0, 114);
-    color: white;
-    border: 1px solid rgb(207, 0, 114);
-    border-radius: 3px;
-    width: auto;
-    font-size: 16px;
-    padding-left: 22px;
-    padding-right: 22px;
-    cursor: pointer;
+  margin: 0;
+  margin-left: 18px;
+  background: rgb(207, 0, 114);
+  color: white;
+  border: 1px solid rgb(207, 0, 114);
+  border-radius: 3px;
+  width: auto;
+  font-size: 16px;
+  padding-left: 22px;
+  padding-right: 22px;
+  cursor: pointer;
 }
 
 .splash-search p {
-    line-height: 2.5px;
-    font-size: 16px;
+  line-height: 2.5px;
+  font-size: 16px;
 }
-
 
 /* trending container */
 
 .splash-trending-container {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin: auto;
-    align-items: center;
-    font-family: "Open Sans", sans-serif;
-    padding-bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 44px;
 }
 
 .splash-trending-container h3 {
-    margin-bottom: 40px;
-    font-weight: 400;
-    font-size: 30px;
-    font-weight: 300;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .splash-trending-tracks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.splash-trending-container img {
+  height: 180px;
+  width: 180px;
 }
 
 .splash-trending-button {
-    background: rgb(207, 0, 114);
-    color: white;
-    border: 1px solid rgb(207, 0, 114);
-    border-radius: 3px;
-    padding: 13px 30px;
-    font-size: 18px;
-    font-weight: 350;
-    height: 47px;
-    cursor: pointer;
+  background: rgb(207, 0, 114);
+  color: white;
+  border: 1px solid rgb(207, 0, 114);
+  border-radius: 3px;
+  padding: 13px 30px;
+  font-size: 18px;
+  font-weight: 350;
+  height: 47px;
+  cursor: pointer;
 }
-
 
 /* splash mobile div */
 
 .splash-mobile {
-    display: flex;
-    height: 450px;
-    background: rgb(240, 240, 240);
-    padding: 50px 70px 0px 70px;
-    margin-bottom: -60px;
+  display: flex;
+  height: 450px;
+  background: rgb(240, 240, 240);
+  padding: 50px 70px 0px 70px;
+  margin-bottom: -60px;
 }
 
 .mobile-img {
-    background-repeat: no-repeat;
-    background-size: 83% 87%;
-    background-position: bottom;
-    height: 100%;
-    width: 70%;
-    position: relative;
+  background-repeat: no-repeat;
+  background-size: 83% 87%;
+  background-position: bottom;
+  height: 100%;
+  width: 70%;
+  position: relative;
 }
 
 .mobile-text {
-    position: absolute;
-    right: 0;
-    height: auto;
-    width: 32%;
-    margin-top: 35px;
+  position: absolute;
+  right: 0;
+  height: auto;
+  width: 32%;
+  margin-top: 35px;
 }
 
 .mobile-text h1 {
-    font-size: 35px;
-    margin-bottom: 15px;
-    color: rgb(36, 36, 36);
-    font-weight: 100;
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: rgb(36, 36, 36);
+  font-weight: 100;
 }
 
 .mobile-border {
-    margin-top: 22px;
-    height: 3px;
-    width: 70px;
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 147, 165));
+  margin-top: 22px;
+  height: 3px;
+  width: 70px;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 147, 165));
 }
 
 .mobile-text h3 {
-    font-size: 23px;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    width: 300px;
-    font-weight: 100;
+  font-size: 23px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  width: 300px;
+  font-weight: 100;
 }
-
 
 /* splash creator */
 
 .splash-creators {
-    background-image: url(image1.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 350px;
+  background-image: url(image1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 350px;
 }
 
 .splash-creators-text {
-    width: 30%;
-    color: white;
-    padding-top: 40px;
-    padding-left: 70px;
+  width: 30%;
+  color: white;
+  padding-top: 40px;
+  padding-left: 70px;
 }
 
 .splash-creators-text h1 {
-    font-size: 35px;
-    margin-bottom: 15px;
-    font-weight: 100;
+  font-size: 35px;
+  margin-bottom: 15px;
+  font-weight: 100;
 }
 
 .splash-creators-text h3 {
-    font-size: 23px;
-    margin-top: 15px;
-    width: 530px;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    font-weight: 100;
+  font-size: 23px;
+  margin-top: 15px;
+  width: 530px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  font-weight: 100;
 }
 
 .splash-creators-text button {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    border-radius: 3px;
-    padding: 11.5px;
-    margin-right: 25px;
-    font-size: 18px;
-    font-weight: 350;
-    padding-right: 25px;
-    padding-left: 25px;
-    cursor: pointer;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 3px;
+  padding: 11.5px;
+  margin-right: 25px;
+  font-size: 18px;
+  font-weight: 350;
+  padding-right: 25px;
+  padding-left: 25px;
+  cursor: pointer;
 }
-
 
 /* splash endpage */
 
 .splash-endpage {
-    text-align: center;
-    margin-top: 85px;
-    height: 290px;
+  text-align: center;
+  margin-top: 85px;
+  height: 290px;
 }
 
 .splash-endpage h1 {
-    font-size: 35px;
-    margin-bottom: 15px;
-    font-weight: 100;
+  font-size: 35px;
+  margin-bottom: 15px;
+  font-weight: 100;
 }
 
 .splash-endpage h3 {
-    font-size: 23px;
-    margin-top: 20px;
-    font-weight: 100;
+  font-size: 23px;
+  margin-top: 20px;
+  font-weight: 100;
 }
 
-.splash-endpage>button {
-    border-radius: 3px;
-    padding: 11.5px 40px;
-    font-size: 18px;
-    font-weight: 100;
-    cursor: pointer;
+.splash-endpage > button {
+  border-radius: 3px;
+  padding: 11.5px 40px;
+  font-size: 18px;
+  font-weight: 100;
+  cursor: pointer;
 }
 
 .splash-endpage-login {
-    display: flex;
-    justify-content: center;
-    margin-top: 14px;
-    height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  height: 40px;
 }
 
 .splash-endpage-login p {
-    font-size: 12px;
-    margin-right: 13px;
-    color: rgb(70, 70, 70);
-    line-height: 3;
+  font-size: 12px;
+  margin-right: 13px;
+  color: rgb(70, 70, 70);
+  line-height: 3;
 }
 
 .splash-endpage-login button {
-    border: 1px solid rgb(226, 226, 226);
-    font-size: 16px;
-    padding: 5px 15px;
-    color: rgb(70, 70, 70);
-    cursor: pointer;
+  border: 1px solid rgb(226, 226, 226);
+  font-size: 16px;
+  padding: 5px 15px;
+  color: rgb(70, 70, 70);
+  cursor: pointer;
 }
 
 .splash-endpage-login button:hover {
-    border: 1px solid rgb(150, 150, 150);
-    cursor: pointer;
+  border: 1px solid rgb(150, 150, 150);
+  cursor: pointer;
 }
-
 
 /* splash footer */
 
 .splash-footer {
-    border-top: 1px solid #f2f2f2;
-    margin: auto 30px;
-    padding-top: 15px;
-    padding-bottom: 55px;
-    height: 47px;
-    font-size: 14px;
-    display: flex;
-    color: rgb(207, 0, 114);
+  border-top: 1px solid #f2f2f2;
+  margin: auto 30px;
+  padding-top: 15px;
+  padding-bottom: 55px;
+  height: 47px;
+  font-size: 14px;
+  display: flex;
+  color: rgb(207, 0, 114);
 }
 
 .splash-footer p {
-    margin: 0 5px;
+  margin: 0 5px;
 }
 
 .splash-footer a {
-    color: rgb(207, 0, 114);
+  color: rgb(207, 0, 114);
 }
 
 .splash-footer a:hover {
-    color: rgb(140, 0, 77);
+  color: rgb(140, 0, 77);
 }
