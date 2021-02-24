@@ -1,0 +1,16 @@
+.ellipsis-button {
+    width: 46px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    background: transparent;
+    border: 0;
+    color: #ccc;
+    font-size: 22px;
+}
+
+.profile-dropdown {
+    position: absolute;
+    z-index: 20;
+}

@@ -100,16 +100,18 @@ function Splash({ isLoaded }) {
           <div>
             <div className="splash-trending-tracks">
               {songsState.map((song) => (
-                <SongsContainer song={song} />
+                <SongsContainer key={song.id} song={song} />
               ))}
             </div>
-            <button
-              className="splash-trending-button"
-              // onClick={() => modalIsOpenSignUp()}
-              // add this onClick and change button name if want this to be "sign up here"
-            >
-              Explore trending playlists
-            </button>
+            <div className="splash-button-row">
+              <button
+                className="splash-trending-button"
+                // onClick={() => modalIsOpenSignUp()}
+                // add this onClick and change button name if want this to be "sign up here"
+              >
+                Explore trending playlists
+              </button>
+            </div>
           </div>
         </div>
         <div className="orange-line"></div>
@@ -156,7 +158,7 @@ function Splash({ isLoaded }) {
       <div className="splash-footer">
         <a href="https://github.com/husseineid-mocha/noise-nimbus">GitHub</a>
         <p>-</p>
-        <a href="www.linkedin.com/in/hussein-eid">Linkedin</a>
+        <a href="https://www.linkedin.com/in/hussein-eid">Linkedin</a>
       </div>
     </div>
   );

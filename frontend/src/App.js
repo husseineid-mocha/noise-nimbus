@@ -3,8 +3,9 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 // import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
-import Navigation from "./components/Navigation";
+// import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,8 +23,7 @@ function App() {
             <Splash isLoaded={isLoaded} />
           </Route>
           <Route path="/dashboard">
-            <p>dashboard</p>
-            {/* <Splash isLoaded={isLoaded} /> */}
+            <Dashboard isLoaded={isLoaded} />
           </Route>
         </Switch>
       )}

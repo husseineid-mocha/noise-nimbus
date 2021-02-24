@@ -1,4 +1,230 @@
-.navBarContainer {
-    background: orange;
-    padding: 20px;
+.navbarContainer {
+    font-family: "Overpass";
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background-color: #333;
+    height: 46px;
+    width: 100%;
+    min-width: 1240px;
+    line-height: 3.2;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.navbar-logo {
+    background-image: url(logo2.jpg);
+    background-size: 100% 100%;
+    width: 84px;
+    height: 100%;
+}
+
+.navbar-linkedin {
+    width: 103px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.navbar-left-link {
+    width: 103px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.navbar-search {
+    width: 430px;
+    padding: 0 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.navbar-search-input {
+    height: 26px;
+    width: 430px;
+    background: lightgray;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding-left: 8px;
+    font-size: 14px;
+    transition: background 0.5s;
+}
+
+.navbar-search-button {
+    width: 15px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    height: 15px;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    overflow: visible;
+    cursor: pointer;
+    top: 14px;
+    right: 25px;
+    color: gray;
+}
+
+.navbar-search-button:focus {
+    background: transparent;
+    color: gray;
+}
+
+.upgrade {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.upgrade:hover {
+    color: rgb(255, 133, 200);
+}
+
+.navbar-search-button svg {
+    font-size: 14px;
+}
+
+.navbar-search-input:focus {
+    background: white;
+}
+
+.navbar-search-input:not(:focus) {
+    background: rgb(230, 230, 230);
+}
+
+.navbar-search-input::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+.navbar-right-link {
+    width: 65px;
+    text-align: center;
+}
+
+.navbar-user {
+    width: 140px;
+    position: relative;
+    text-align: center;
+}
+
+
+/* .navbar-user:focus {
+    outline: none;
+    background: black;
+    color: cyan;
+} */
+
+.navbar-profile-pic {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background: linear-gradient(to top right, rgb(67, 29, 48), rgb(147, 54, 128));
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.navbar-profile-pic img {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+}
+
+.navbar-username {
+    margin-left: 43px;
+    color: #ccc;
+    padding-right: 10px;
+}
+
+.navbar-icon-button {
+    width: 46px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    background: transparent;
+    border: 0;
+    color: #ccc;
+}
+
+.navbar-icon-button:nth-of-type(2) {
+    font-size: 18px;
+}
+
+.user-dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 0;
+}
+
+.navbar-user-icon,
+.navbar-linkedin-icon {
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.navbar-github-icon {
+    margin: 0 8px 0 9px;
+    font-size: 14px;
+}
+
+.navbar-portfolio-icon {
+    margin: 0 7px 0 9px;
+    font-size: 14px;
+}
+
+.user-dropdown a {
+    position: relative;
+    top: 46px;
+    background: black;
+    right: 140px;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 140px;
+}
+
+.user-dropdown a:hover {
+    background: #333;
+}
+
+.option-dropdown {
+    position: relative;
+}
+
+.navbar>button:last-of-type:focus {
+    background: black;
+    color: cyan;
+}
+
+.navbar>button {
+    background: transparent;
+}
+
+.option-dropdown button {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    outline: none;
+    border: none;
+    background: black;
+    height: 30px;
+    width: 170px;
+    color: rgb(0, 207, 207);
+    font-size: 12px;
+    font-weight: 900;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.option-dropdown button:hover {
+    background: #333;
 }
