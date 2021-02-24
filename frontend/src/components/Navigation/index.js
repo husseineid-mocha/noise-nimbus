@@ -51,7 +51,9 @@ function Navigation({ isLoaded }) {
       </Link>
       <a className="navbar-user">
         <div className="navbar-profile-pic"></div>
-        <span className="navbar-username">{sessionUser.username}</span>
+        {sessionUser && (
+          <span className="navbar-username">{sessionUser.username}</span>
+        )}
         <i className="fas fa-angle-down"></i>
       </a>
       <button className="navbar-icon-button">

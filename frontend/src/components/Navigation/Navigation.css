@@ -1,6 +1,6 @@
 .navbarContainer {
     font-family: "Overpass";
-    overflow: hidden;
+    /* overflow: hidden; */
     position: fixed;
     top: 0;
     background-color: #333;
@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     z-index: 10;
+    max-height: 46px;
 }
 
 .navbar-logo {
@@ -152,79 +153,10 @@
     color: #ccc;
 }
 
+.navbar-icon-button:focus {
+    outline: 0;
+}
+
 .navbar-icon-button:nth-of-type(2) {
     font-size: 18px;
-}
-
-.user-dropdown {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 0;
-}
-
-.navbar-user-icon,
-.navbar-linkedin-icon {
-    margin: 0 10px;
-    font-size: 14px;
-}
-
-.navbar-github-icon {
-    margin: 0 8px 0 9px;
-    font-size: 14px;
-}
-
-.navbar-portfolio-icon {
-    margin: 0 7px 0 9px;
-    font-size: 14px;
-}
-
-.user-dropdown a {
-    position: relative;
-    top: 46px;
-    background: black;
-    right: 140px;
-    font-size: 12px;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    height: 30px;
-    width: 140px;
-}
-
-.user-dropdown a:hover {
-    background: #333;
-}
-
-.option-dropdown {
-    position: relative;
-}
-
-.navbar>button:last-of-type:focus {
-    background: black;
-    color: cyan;
-}
-
-.navbar>button {
-    background: transparent;
-}
-
-.option-dropdown button {
-    position: absolute;
-    top: 46px;
-    right: 0;
-    outline: none;
-    border: none;
-    background: black;
-    height: 30px;
-    width: 170px;
-    color: rgb(0, 207, 207);
-    font-size: 12px;
-    font-weight: 900;
-    text-align: left;
-    padding-left: 10px;
-}
-
-.option-dropdown button:hover {
-    background: #333;
 }

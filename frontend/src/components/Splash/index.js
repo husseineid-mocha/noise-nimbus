@@ -21,7 +21,7 @@ function Splash({ isLoaded }) {
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector((state) => state.session.user);
   const songsState = useSelector((state) => state.song);
-  console.log(songsState);
+  // console.log(songsState);
 
   useEffect(() => {
     if (sessionUser) {

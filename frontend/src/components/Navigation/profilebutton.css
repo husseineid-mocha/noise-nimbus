@@ -8,9 +8,36 @@
     border: 0;
     color: #ccc;
     font-size: 22px;
+    height: 46px;
 }
 
 .profile-dropdown {
-    position: absolute;
-    z-index: 20;
+    position: relative;
+    background: black;
+    right: 94px;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 140px;
+    border-radius: 3px;
+}
+
+.logout-button-div {
+    box-sizing: border-box;
+}
+
+.logout-button {
+    width: 139px;
+    height: 28px;
+    background: transparent;
+    color: #ccc;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: rgb(255, 133, 200);
 }
