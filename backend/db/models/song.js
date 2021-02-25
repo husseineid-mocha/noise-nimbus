@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       image: DataTypes.STRING,
       audioFile: DataTypes.STRING,
       genreId: DataTypes.INTEGER,
-      artistId: DataTypes.INTEGER,
+      artistName: DataTypes.STRING,
     },
     {}
   );
@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     Song.hasMany(models.Comment, { foreignKey: "songId" });
     Song.hasMany(models.Like, { foreignKey: "songId" });
     Song.belongsTo(models.Genre, { foreignKey: "genreId" });
-    Song.belongsTo(models.Artist, { foreignKey: "artistId" });
   };
   return Song;
 };

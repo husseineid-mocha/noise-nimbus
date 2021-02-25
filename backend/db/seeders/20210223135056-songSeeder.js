@@ -12,7 +12,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/B.o.B+-+Airplanes+(feat.+Hayley+Williams+of+Paramore)+%5BOfficial+Video%5D-320k.mp3",
           genreId: 1,
-          artistId: 1,
+          artistName: "B.o.B",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -24,7 +24,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Einaudi_+Experience-320k.mp3",
           genreId: 4,
-          artistId: 2,
+          artistName: "Ludovico Einaudi",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -36,7 +36,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Eminem+-+Mockingbird.mp3",
           genreId: 2,
-          artistId: 3,
+          artistName: "Eminem",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -48,7 +48,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/From+Now+On.mp3",
           genreId: 5,
-          artistId: 4,
+          artistName: "Hugh Jackman",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -60,7 +60,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Lukas+Graham+-+7+Years+.mp3",
           genreId: 1,
-          artistId: 5,
+          artistName: "Lukas Graham",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -72,7 +72,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Maroon+5+-+Girls+Like+You+ft.+Cardi+B.mp3",
           genreId: 1,
-          artistId: 6,
+          artistName: "Maroon 5",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -84,7 +84,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Old+Town+Road+Official+Video+ft+Billy+Ray+Cyrus.mp3",
           genreId: 2,
-          artistId: 7,
+          artistName: "Lil Nas",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -95,7 +95,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Pompeii+-320k.mp3",
           genreId: 1,
-          artistId: 8,
+          artistName: "Bastille",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -106,7 +106,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Post+Malone%2C+Swae+Lee+-+Sunflower+-320k.mp3",
           genreId: 2,
-          artistId: 9,
+          artistName: "Post Malone",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -117,7 +117,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/See+You+Again+ft.+Charlie+Puth+.mp3",
           genreId: 1,
-          artistId: 10,
+          artistName: "Charlie Puth",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -128,7 +128,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Soulja+Boy+Tell'em+-+Crank+That+(Soulja+Boy)-320k.mp3",
           genreId: 2,
-          artistId: 11,
+          artistName: "Soulja Boy",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -139,7 +139,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Taylor+Swift+-+Blank+Space-320k.mp3",
           genreId: 1,
-          artistId: 12,
+          artistName: "Taylor Swift",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -150,7 +150,7 @@ module.exports = {
           audioFile:
             "https://noisenimbussongs.s3.amazonaws.com/Waiting+For+Love.mp3",
           genreId: 1,
-          artistId: 13,
+          artistName: "Avicii",
           createdAt: new Date(),
           updatedAt: new Date(),
         },

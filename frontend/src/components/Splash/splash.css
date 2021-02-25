@@ -29,7 +29,7 @@ html {
 
 .splash-top-line {
     background: rgb(207, 0, 114);
-    height: 6px;
+    height: 13px;
 }
 
 .splash-banner-navbar {
@@ -148,6 +148,7 @@ html {
     margin-top: 30px;
     align-items: center;
     padding-top: 12px;
+    margin-bottom: 30px;
 }
 
 .splash-search input {
@@ -305,6 +306,7 @@ html {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 350px;
+    margin-top: 50px;
 }
 
 .splash-creators-text {
@@ -362,6 +364,7 @@ html {
     font-size: 23px;
     margin-top: 20px;
     font-weight: 100;
+    margin-bottom: 16px;
 }
 
 .splash-endpage>button {

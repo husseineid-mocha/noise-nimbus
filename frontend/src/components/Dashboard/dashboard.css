@@ -1,0 +1,97 @@
+.dashboard {
+    min-width: 1240px;
+    width: 1180px;
+    height: 1141px;
+    margin: 0 auto;
+    margin-top: 46px;
+    padding: 0 30px;
+    font-family: "Open Sans", sans-serif;
+    min-width: 920px;
+    background: white;
+    display: flex;
+}
+
+.dashboard-main {
+    border-right: 1px solid #f2f2f2;
+    padding-top: 32px;
+    padding-right: 30px;
+}
+
+.dashboard-content {
+    width: 819px;
+    height: 330px;
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 34px;
+}
+
+.dashboard-content:last-of-type {
+    border: 0;
+    margin: 0;
+}
+
+.dashboard-content h1 {
+    font-size: 21px;
+    height: 29px;
+}
+
+.dashboard-content>p {
+    margin-top: 3px;
+    height: 19px;
+    font-size: 14px;
+    color: gray;
+}
+
+.dashboard-weekly {
+    width: 819px;
+    height: 220px;
+    margin-top: 21px;
+    display: flex;
+    /* background-image: url(cyberpunk.jpg); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.weekly-photo {
+    height: 180px;
+    width: 180px;
+    /* background-image: url(pixel_skyline2.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px;
+}
+
+.weekly-song-list {
+    margin: 20px 15px 20px 0;
+    width: 593px;
+    overflow: auto;
+}
+
+.weekly-song-list::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+.dashboard-top {
+    height: 230px;
+    width: 819px;
+    overflow: auto;
+    margin-top: 23px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-new ul {
+    display: flex;
+}
+
+.tile-image {
+    height: 180px;
+    width: 180px;
+    margin: 0px 10px;
+}
+
+p.song-title {
+    margin: 0px 10px;
+}

@@ -12,15 +12,14 @@ import { activateSignUp } from "../../store/modal";
 import Carousel from "../Carousel";
 import { songs } from "../../store/songs";
 import SongsContainer from "../SongsContainer";
-// import Slider from "../Carousel3";
-// import Cagain from "../CarouselAgain";
+import MusicPlayer from "../MusicPlayer";
 
 function Splash({ isLoaded }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector((state) => state.session.user);
-  const songsState = useSelector((state) => state.song);
+  const songsState = useSelector((state) => state.song.songs);
   // console.log(songsState);
 
   useEffect(() => {
@@ -160,6 +159,9 @@ function Splash({ isLoaded }) {
         <p>-</p>
         <a href="https://www.linkedin.com/in/hussein-eid">Linkedin</a>
       </div>
+      {/* <div>
+        <MusicPlayer />
+      </div> */}
     </div>
   );
 }

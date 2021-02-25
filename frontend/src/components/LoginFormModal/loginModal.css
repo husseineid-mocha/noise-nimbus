@@ -81,3 +81,8 @@ button.demo-login-button {
         bottom: 0%;
     }
 } */
+
+.modal-box {
+    display: flex;
+    position: fixed;
+}

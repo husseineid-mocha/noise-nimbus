@@ -6,6 +6,18 @@ const { Song } = db;
 const { asyncHandler, csrfProtection } = require("./utils.js");
 
 router.get(
+  "/:id",
+  csrfProtection,
+  asyncHandler(async (req, res) => {
+    console.log("LAAAABEL", req.params);
+    const song = await Song.findByPk(req.params.id);
+    return res.json({
+      song,
+    });
+  })
+);
+
+router.get(
   "/",
   csrfProtection,
   asyncHandler(async (req, res) => {
