@@ -7,6 +7,7 @@ import * as sessionActions from "./store/session";
 import Splash from "./components/Splash";
 import Dashboard from "./components/Dashboard";
 import MusicPlayer from "./components/MusicPlayer";
+import SongPage from "./components/SongPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,10 +27,11 @@ function App() {
           <Route path="/dashboard">
             <Dashboard isLoaded={isLoaded} />
           </Route>
-          <Route path="/song">
-            <MusicPlayer />
-          </Route>
-          <Route component={() => <div>Hussein you messed up a route</div>} />
+          <Route
+            exact
+            path="/song/:id"
+            component={(props) => <SongPage isLoaded={isLoaded} {...props} />}
+          ></Route>
         </Switch>
       )}
     </>

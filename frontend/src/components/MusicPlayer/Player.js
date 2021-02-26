@@ -10,11 +10,11 @@ function Player(props) {
   useEffect(() => {
     // console.log(audioEl.current);
     if (isPlaying) {
-      audioEl.current.play();
+      audioEl.current?.play();
     } else {
-      audioEl.current.pause();
+      audioEl.current?.pause();
     }
-  });
+  }, [isPlaying, audioEl]);
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
@@ -42,7 +42,7 @@ function Player(props) {
     }
   };
 
-  if (!props.songs) return;
+  if (!props.songs || !props.songs[props.currentSongIndex]) return null;
   return (
     <div className="c-player">
       <audio

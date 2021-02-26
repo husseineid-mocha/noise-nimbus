@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { songs, singleSong } from "../../store/songs";
 import { useEffect } from "react";
@@ -8,11 +9,13 @@ import "./dashboard.css";
 
 function Dashboard({ isLoaded }) {
   const dispatch = useDispatch();
+  const history = useHistory();
   const songsState = useSelector((state) => state.song.songs);
   console.log(songsState);
 
   useEffect(() => {
     dispatch(songs());
+    // dispatch(singleSong(song.id));
   }, []);
 
   return (
@@ -37,9 +40,13 @@ function Dashboard({ isLoaded }) {
               {songsState.map((song) => (
                 <ul
                   className="tile-container"
-                  onClick={() => dispatch(singleSong(song.id))}
+                  onClick={() => {
+                    dispatch(singleSong(song.id));
+                  }}
                 >
-                  <img className="tile-image" src={song.image}></img>
+                  <Link to={`/song/${song.id}`}>
+                    <img className="tile-image" src={song.image}></img>
+                  </Link>
                   <p className="song-title">{song.title}</p>
                 </ul>
               ))}

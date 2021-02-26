@@ -21,7 +21,7 @@ function Navigation({ isLoaded }) {
   return (
     <div className="navbarContainer">
       <Link className="navbar-logo" to="/dashboard"></Link>
-      <Link className="navbar-left-link upgrade" to="dashboard">
+      <Link className="navbar-left-link upgrade" to="/dashboard">
         Home
       </Link>
       <a
