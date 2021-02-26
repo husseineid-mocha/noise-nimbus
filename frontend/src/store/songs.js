@@ -54,7 +54,11 @@ const songReducer = (state = initialState, action) => {
     case GET_SONGS:
       return { ...state, songs: action.payload.songs };
     case GET_SONG:
-      return { ...state, activeSongId: action.payload.song.id };
+      return {
+        ...state,
+        songs: action.payload.song,
+        activeSongId: action.payload.song.id,
+      };
     default:
       return state;
   }

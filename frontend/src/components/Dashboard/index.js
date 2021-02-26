@@ -37,7 +37,7 @@ function Dashboard({ isLoaded }) {
             <h1>Charts: Top 10</h1>
             <p>The latest hits, updated all the time</p>
             <div className="dashboard-top">
-              {songsState.map((song) => (
+              {songsState.reverse().map((song) => (
                 <ul
                   className="tile-container"
                   onClick={() => {
