@@ -82,8 +82,13 @@
     justify-content: space-between;
 }
 
-.dashboard-new ul {
+.dashboard-new {
+    height: 230px;
+    width: 819px;
+    overflow: auto;
+    margin-top: 23px;
     display: flex;
+    justify-content: space-between;
 }
 
 .tile-image {

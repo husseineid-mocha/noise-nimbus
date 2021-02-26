@@ -5,7 +5,7 @@ import { songs, singleSong } from "../../store/songs";
 import { useEffect } from "react";
 import MusicPlayer from "../MusicPlayer";
 import Navigation from "../Navigation";
-import "./songpage.css";
+// import "./songpage.css";
 
 function Dashboard(props) {
   const isLoaded = props.isLoaded;

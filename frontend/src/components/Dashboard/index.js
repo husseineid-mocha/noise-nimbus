@@ -56,7 +56,21 @@ function Dashboard({ isLoaded }) {
           <div className="dashboard-content">
             <h1>Scenes</h1>
             <p>Discover tomorrow's sounds today</p>
-            <div className="dashboard-new">{}</div>
+            <div className="dashboard-new">
+              {songsState.reverse().map((song) => (
+                <ul
+                  className="tile-container"
+                  onClick={() => {
+                    dispatch(singleSong(song.id));
+                  }}
+                >
+                  <Link to={`/song/${song.id}`}>
+                    <img className="tile-image" src={song.image}></img>
+                  </Link>
+                  <p className="song-title">{song.title}</p>
+                </ul>
+              ))}
+            </div>
           </div>
         </div>
       </div>
