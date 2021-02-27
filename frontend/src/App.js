@@ -28,7 +28,6 @@ function App() {
             <Dashboard isLoaded={isLoaded} />
           </Route>
           <Route
-            exact
             path="/song/:id"
             component={(props) => <SongPage isLoaded={isLoaded} {...props} />}
           ></Route>

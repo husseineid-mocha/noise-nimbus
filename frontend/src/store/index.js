@@ -4,12 +4,14 @@ import sessionReducer from "./session";
 import modalReducer from "./modal";
 import songReducer from "./songs";
 import musicPlayerReducer from "./musicPlayer";
+import commentReducer from "./comment";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   modal: modalReducer,
   song: songReducer,
   musicPlayer: musicPlayerReducer,
+  comment: commentReducer,
 });
 
 let enhancer;

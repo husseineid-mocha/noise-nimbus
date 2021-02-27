@@ -37,19 +37,22 @@ function Dashboard({ isLoaded }) {
             <h1>Charts: Top 10</h1>
             <p>The latest hits, updated all the time</p>
             <div className="dashboard-top">
-              {songsState.reverse().map((song) => (
-                <ul
-                  className="tile-container"
-                  onClick={() => {
-                    dispatch(singleSong(song.id));
-                  }}
-                >
-                  <Link to={`/song/${song.id}`}>
-                    <img className="tile-image" src={song.image}></img>
-                  </Link>
-                  <p className="song-title">{song.title}</p>
-                </ul>
-              ))}
+              {console.log("FLLLLLAAAAAAAGGGGGG", songsState)}
+              {songsState
+                ? songsState.map((song) => (
+                    <ul
+                      className="tile-container"
+                      onClick={() => {
+                        dispatch(singleSong(song.id));
+                      }}
+                    >
+                      <Link to={`/song/${song.id}`}>
+                        <img className="tile-image" src={song.image}></img>
+                      </Link>
+                      <p className="song-title">{song.title}</p>
+                    </ul>
+                  ))
+                : null}
             </div>
           </div>
 
@@ -57,7 +60,7 @@ function Dashboard({ isLoaded }) {
             <h1>Scenes</h1>
             <p>Discover tomorrow's sounds today</p>
             <div className="dashboard-new">
-              {songsState.reverse().map((song) => (
+              {songsState?.map((song) => (
                 <ul
                   className="tile-container"
                   onClick={() => {

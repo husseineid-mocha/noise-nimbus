@@ -5,29 +5,30 @@ const db = require("../../db/models");
 const { Song, Comment } = db;
 const { asyncHandler, csrfProtection } = require("./utils.js");
 
-// router.get(
-//   "/:id",
-//   csrfProtection,
-//   asyncHandler(async (req, res) => {
-//     const song = await Song.findByPk(req.params.id);
-//     return res.json({
-//       song,
-//     });
-//   })
-// );
+router.get(
+  "/",
+  asyncHandler(async (req, res) => {
+    const comments = await Comment.findAll();
+    return res.json({
+      comments,
+    });
+  })
+);
 
 router.post(
   "/:id",
-  csrfProtection,
   asyncHandler(async (req, res) => {
     const songId = req.params.id;
-    const comment = req.body;
+    const { payload } = req.body;
+    console.log("PAAAAAAYLOOOOOAAAAD", payload.comment, payload.userId);
 
-    await Comment.create({
-      body: comment,
-      userId: res.locals.user.id,
+    const comment = await Comment.create({
+      body: payload.comment,
+      userId: payload.userId,
       songId,
     });
+
+    return res.json({ comment });
   })
 );
 

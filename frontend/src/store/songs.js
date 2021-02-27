@@ -56,7 +56,7 @@ const songReducer = (state = initialState, action) => {
     case GET_SONG:
       return {
         ...state,
-        songs: action.payload.song,
+        currentSong: action.payload.song,
         activeSongId: action.payload.song.id,
       };
     default:
