@@ -4,7 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { songs, singleSong } from "../../store/songs";
 import MusicPlayer from "../MusicPlayer";
 import Navigation from "../Navigation";
-import { createComment, getAllComments } from "../../store/comment";
+import Comment from "../Comment";
+import {
+  createComment,
+  getAllComments,
+  getSongComments,
+} from "../../store/comment";
 import "./songpage.css";
 
 function SongPage(props) {
@@ -18,7 +23,7 @@ function SongPage(props) {
   console.log(comments);
 
   useEffect(() => {
-    dispatch(getAllComments());
+    dispatch(getSongComments(props.match.params.id));
   }, []);
 
   console.log(sessionUser);
@@ -132,9 +137,8 @@ function SongPage(props) {
                   </div>
                 </div>
                 <div className="song-desc-and-comments">
-                  {/* {console.log(comments)} */}
                   {comments.map((comment) => (
-                    <div>{JSON.stringify(comment.body)}</div>
+                    <Comment {...comment} key={comment.id} />
                   ))}
                 </div>
               </div>

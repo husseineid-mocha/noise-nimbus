@@ -38,7 +38,7 @@ function Dashboard({ isLoaded }) {
               <div className="weekly-song-list">
                 {songsState
                   ? songsState.map((song) => (
-                      <ul
+                      <button
                         className="small-tile-container"
                         onClick={() => {
                           dispatch(singleSong(song.id));
@@ -68,7 +68,7 @@ function Dashboard({ isLoaded }) {
                             </button>
                           </div>
                         </div>
-                      </ul>
+                      </button>
                     ))
                   : null}
               </div>
@@ -79,20 +79,28 @@ function Dashboard({ isLoaded }) {
             <h1>Charts: Top 10</h1>
             <p>The latest hits, updated all the time</p>
             <div className="dashboard-top">
-              {console.log("FLLLLLAAAAAAAGGGGGG", songsState)}
+              {/* {console.log("FLLLLLAAAAAAAGGGGGG", songsState)} */}
               {songsState
                 ? songsState.map((song) => (
-                    <ul
-                      className="tile-container"
-                      onClick={() => {
-                        dispatch(singleSong(song.id));
-                      }}
-                    >
-                      <Link to={`/song/${song.id}`}>
-                        <img className="tile-image" src={song.image}></img>
-                      </Link>
-                      <p className="song-title">{song.title}</p>
-                    </ul>
+                    <div>
+                      <div className="button-outer"></div>
+                      <div className="tile-outer">
+                        <Link
+                          className="tile-container"
+                          to={`/song/${song.id}`}
+                        >
+                          <button
+                            className="play-button"
+                            onClick={() => {
+                              dispatch(singleSong(song.id));
+                            }}
+                          ></button>
+
+                          <img className="tile-image" src={song.image}></img>
+                        </Link>
+                        <p className="song-title">{song.title}</p>
+                      </div>
+                    </div>
                   ))
                 : null}
             </div>
@@ -103,7 +111,7 @@ function Dashboard({ isLoaded }) {
             <p>Discover tomorrow's sounds today</p>
             <div className="dashboard-new">
               {songsState?.map((song) => (
-                <ul
+                <button
                   className="tile-container"
                   onClick={() => {
                     dispatch(singleSong(song.id));
@@ -113,7 +121,7 @@ function Dashboard({ isLoaded }) {
                     <img className="tile-image" src={song.image}></img>
                   </Link>
                   <p className="song-title">{song.title}</p>
-                </ul>
+                </button>
               ))}
             </div>
           </div>

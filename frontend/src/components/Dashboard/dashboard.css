@@ -139,3 +139,17 @@ ul.small-tile-container {
     font-size: 14px;
     height: 26px;
 }
+
+button.play-button {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tile-container {
+    position: relative;
+    display: block;
+}
