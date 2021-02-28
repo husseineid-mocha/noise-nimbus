@@ -1,11 +1,22 @@
 .navbarContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    line-height: 3.2;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin: 0px -16px;
+}
+
+.navbar {
     font-family: "Overpass";
     /* overflow: hidden; */
     position: fixed;
     top: 0;
     background-color: #333;
     height: 46px;
-    width: 100%;
+    width: 2000px;
     min-width: 1240px;
     line-height: 3.2;
     font-size: 14px;

@@ -11,7 +11,11 @@ function Dashboard({ isLoaded }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const songsState = useSelector((state) => state.song.songs);
-  console.log(songsState);
+  const song = useSelector((state) => state.song.currentSong);
+  console.log(songs);
+
+  useEffect(() => dispatch(singleSong(1)), []);
+  // console.log(songsState);
 
   useEffect(() => {
     dispatch(songs());
@@ -28,8 +32,46 @@ function Dashboard({ isLoaded }) {
             <h1>More of what you like</h1>
             <p>Suggestions based on what you've liked or played</p>
             <div className="dashboard-weekly">
-              <div className="weekly-photo"></div>
-              <div className="weekly-song-list"></div>
+              <div className="weekly-photo">
+                <img className="weekly-photo" src={song?.image} />
+              </div>
+              <div className="weekly-song-list">
+                {songsState
+                  ? songsState.map((song) => (
+                      <ul
+                        className="small-tile-container"
+                        onClick={() => {
+                          dispatch(singleSong(song.id));
+                        }}
+                      >
+                        <div className="small-list">
+                          <div className="small-image-and-title">
+                            <Link to={`/song/${song.id}`}>
+                              <img
+                                className="small-tile-image"
+                                src={song.image}
+                              ></img>
+                            </Link>
+                            <p className="song-title">
+                              {song.title} by {song.artistName}
+                            </p>
+                          </div>
+                          <div>
+                            <button>
+                              <i className="fas fa-heart"></i>
+                            </button>
+                            <button>
+                              <i className="fas fa-retweet"></i>
+                            </button>
+                            <button>
+                              <i className="fas fa-share-square"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </ul>
+                    ))
+                  : null}
+              </div>
             </div>
           </div>
 

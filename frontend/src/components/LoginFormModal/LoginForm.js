@@ -30,22 +30,7 @@ function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
-    // fetch("/api/session", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     credential,
-    //     password,
-    //   }),
-    // })
-    //   .then((j) => j.json())
-    //   .then((result) => {
-    //     sessionStorage.setItem("token", result.token);
-    //     localStorage.setItem("user", JSON.stringify(result.user));
-    //     history.push("/dashboard");
-    //   });
+
     return dispatch(sessionActions.login({ credential, password })).catch(
       async (res) => {
         const data = await res.json();
@@ -72,6 +57,9 @@ function LoginForm() {
         contentLabel="Example Modal"
       >
         <form className="login-form" onSubmit={handleSubmit}>
+          <div className="welcome-span">
+            <span>Welcome to NoiseNimbus</span>
+          </div>
           <ul>
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>
@@ -100,6 +88,9 @@ function LoginForm() {
           <button className="login-button" type="submit">
             Sign In
           </button>
+          <div className="auth-method-separator">
+            <span>or</span>
+          </div>
           <button
             className="demo-login-button"
             type="button"

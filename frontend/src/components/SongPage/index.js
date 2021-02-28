@@ -27,7 +27,6 @@ function SongPage(props) {
   }, []);
 
   const handleSubmit = (e) => {
-    debugger;
     e.preventDefault();
     const payload = {
       userId: sessionUser.id,

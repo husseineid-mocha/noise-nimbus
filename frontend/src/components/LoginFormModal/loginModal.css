@@ -6,8 +6,7 @@
     /* height: 500px; */
     margin: 0 auto;
     top: 8%;
-    padding: 25px;
-    padding-top: 0px;
+    padding: 15px;
     animation-name: scrolldown;
     animation-duration: 0.5s;
 }
@@ -17,8 +16,9 @@ input.input {
     line-height: 24px;
     padding: 7px 8px;
     border-radius: 5px;
-    width: 380px;
+    width: -webkit-fill-available;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
 }
 
 button.login-button {
@@ -30,7 +30,6 @@ button.login-button {
     padding: 10px 15px;
     height: 40px;
     border-radius: 3px;
-    margin-bottom: 23px;
 }
 
 button.demo-login-button {
@@ -86,4 +85,31 @@ button.demo-login-button {
 .modal-box {
     display: flex;
     position: fixed;
+}
+
+
+/* .auth-method-separator:after,
+.auth-method-separator:before {
+    display: inline-block;
+    width: 43%;
+    border-top: 1px solid #333;
+    position: absolute;
+    top: 0.7em;
+} */
+
+.auth-method-separator {
+    margin: 1em auto;
+    position: relative;
+    text-align: center;
+    font-family: Overpass;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.welcome-span {
+    font-family: Overpass;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 26px;
 }

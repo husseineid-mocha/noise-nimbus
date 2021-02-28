@@ -57,6 +57,9 @@ function SignupForm() {
         contentLabel="Example Modal"
       >
         <form className="signup-form" onSubmit={handleSubmit}>
+          <div className="welcome-span">
+            <span>Welcome to NoiseNimbus</span>
+          </div>
           <ul>
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>

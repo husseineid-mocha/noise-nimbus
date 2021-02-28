@@ -18,7 +18,6 @@ const allComments = (comments) => {
 };
 
 export const createComment = (payload, id) => async (dispatch) => {
-  debugger;
   const response = await csrfFetch(`/api/comment/${id}`, {
     method: "POST",
     body: JSON.stringify({ payload, id }),
