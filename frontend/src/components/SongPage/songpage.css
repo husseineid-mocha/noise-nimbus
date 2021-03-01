@@ -7,10 +7,10 @@
 }
 
 .song-show-page {
-    width: 70%;
+    width: 87%;
     height: auto;
     margin: 0 auto;
-    margin-top: 57px;
+    margin-top: 46px;
     font-family: "Open Sans", sans-serif;
     overflow: hidden;
 }
@@ -35,10 +35,10 @@
     height: 340px;
     width: 340px;
     box-sizing: border-box;
-    margin: 20px 0 20px 130px;
+    margin: 20px 0 20px 30px;
     border: 1px solid gray;
     /* background: linear-gradient(to top right, #da0997, rgb(255, 133, 200)); */
-    position: relative;
+    /* position: relative; */
 }
 
 .song-banner-photo img {
@@ -458,38 +458,6 @@
 .comment-item-photo {
     margin-right: 10px;
 }
-
-
-/* .comment-item-photo div {
-    height: 40px;
-    width: 40px;
-    max-height: 40px;
-    max-width: 40px;
-    border-radius: 50%;
-    background: linear-gradient(to top left, rgb(255, 133, 200), #da0997);
-} */
-
-
-/* .comment-item-photo img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-} */
-
-
-/* .comment-item-header,
-.comment-item-header a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #999;
-    height: 17px;
-} */
-
-
-/* .comment-item-header a:hover {
-    color: #333;
-} */
 
 .comment-item-body button:hover {
     border: 1px solid #ccc;
