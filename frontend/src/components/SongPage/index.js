@@ -42,10 +42,29 @@ function SongPage(props) {
     setComment("");
   };
 
+  const commentSection =
+    Object.values(comments).length > 0 ? (
+      <div className="comments-section">
+        <div className="comments-header">
+          <i class="fas fa-comment-alt"></i>
+          <div class="comment-count">
+            {comments.length} {comments.length === 1 ? "comment" : "comments"}
+          </div>
+        </div>
+        <div>
+          {comments.map((comment) => (
+            <Comment {...comment} key={comment.id} />
+          ))}
+        </div>
+      </div>
+    ) : null;
+
   return (
     <div>
       <>
-        <Navigation isLoaded={isLoaded} />
+        <div className="dark-background">
+          <Navigation isLoaded={isLoaded} />
+        </div>
 
         <div className="song-show-page">
           <div className="song-banner">
@@ -55,7 +74,7 @@ function SongPage(props) {
 
             <div className="song-banner-info">
               <div className="song-banner-top">
-                <h2 className="song-banner-artist"></h2>
+                <h2 className="song-banner-artist">{song?.artistName}</h2>
                 <h3 className="song-banner-created-at"></h3>
               </div>
 
@@ -72,7 +91,7 @@ function SongPage(props) {
           <div className="song-comments">
             <div className="song-comments-container">
               <div className="song-comments-form-container">
-                <div className="artist-comment-photo"></div>
+                {/* <div className="artist-comment-photo"></div> */}
                 <form onSubmit={handleSubmit} className="song-comments-form">
                   <input
                     type="text"
@@ -124,27 +143,26 @@ function SongPage(props) {
                 </div>
               </div>
               <div className="song-comments-index">
-                <div className="song-comments-artist">
-                  <div className="artist-stats">
-                    <p>
+                {/* {comments.map((comment) => (
+                  <Comment {...comment} key={comment.id} />
+                ))} */}
+                {/* <div className="song-comments-artist">
+                  <div className="artist-stats"> */}
+                {/* <p>
                       <i className="fas fa-user-friends"></i>
                       12
                     </p>
                     <p>
                       <i className="fas fa-music"></i>
                       144
-                    </p>
-                  </div>
-                </div>
-                <div className="song-desc-and-comments">
-                  {comments.map((comment) => (
-                    <Comment {...comment} key={comment.id} />
-                  ))}
-                </div>
+                    </p> */}
               </div>
             </div>
+            <div className="song-desc-and-comments">{commentSection}</div>
           </div>
         </div>
+        {/* </div> */}
+        {/* </div> */}
       </>
       ;
     </div>

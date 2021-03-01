@@ -1,12 +1,20 @@
+.dark-background {
+    background: #333;
+    height: 46px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
 .dashboard {
     min-width: 1240px;
-    width: 1180px;
+    width: 70%;
     height: 1141px;
     margin: 0 auto;
     margin-top: 46px;
     padding: 0 30px;
     font-family: "Open Sans", sans-serif;
-    min-width: 920px;
+    /* min-width: 920px; */
     background: white;
     display: flex;
 }
@@ -50,6 +58,18 @@
     /* background: #8b61a8; */
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+
+.more-of-what-you-like-button {
+    background: transparent;
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    /* border-top: 1px solid black; */
+}
+
+.more-of-what-you-like-button:focus {
+    outline: 0;
 }
 
 .weekly-photo {
@@ -141,15 +161,20 @@ ul.small-tile-container {
 }
 
 button.play-button {
+    opacity: 0.7;
     height: 50px;
-    width: 50px;
+    width: 43px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 44%;
     transform: translate(-50%, -50%);
 }
 
 .tile-container {
     position: relative;
     display: block;
+}
+
+.tile-outer {
+    position: relative;
 }

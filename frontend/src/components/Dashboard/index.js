@@ -24,7 +24,9 @@ function Dashboard({ isLoaded }) {
 
   return (
     <div>
-      <Navigation isLoaded={isLoaded} />
+      <div className="dark-background">
+        <Navigation isLoaded={isLoaded} />
+      </div>
       <MusicPlayer />
       <div className="dashboard">
         <div className="dashboard-main">
@@ -39,7 +41,7 @@ function Dashboard({ isLoaded }) {
                 {songsState
                   ? songsState.map((song) => (
                       <button
-                        className="small-tile-container"
+                        className="more-of-what-you-like-button"
                         onClick={() => {
                           dispatch(singleSong(song.id));
                         }}
@@ -89,15 +91,17 @@ function Dashboard({ isLoaded }) {
                           className="tile-container"
                           to={`/song/${song.id}`}
                         >
-                          <button
-                            className="play-button"
-                            onClick={() => {
-                              dispatch(singleSong(song.id));
-                            }}
-                          ></button>
-
                           <img className="tile-image" src={song.image}></img>
                         </Link>
+                        <button
+                          // className="tile-container"
+                          className="play-button"
+                          onClick={() => {
+                            dispatch(singleSong(song.id));
+                          }}
+                        >
+                          <i class="fas fa-play"></i>
+                        </button>
                         <p className="song-title">{song.title}</p>
                       </div>
                     </div>
@@ -111,17 +115,24 @@ function Dashboard({ isLoaded }) {
             <p>Discover tomorrow's sounds today</p>
             <div className="dashboard-new">
               {songsState?.map((song) => (
-                <button
-                  className="tile-container"
-                  onClick={() => {
-                    dispatch(singleSong(song.id));
-                  }}
-                >
-                  <Link to={`/song/${song.id}`}>
-                    <img className="tile-image" src={song.image}></img>
-                  </Link>
-                  <p className="song-title">{song.title}</p>
-                </button>
+                <div>
+                  <div className="button-outer"></div>
+                  <div className="tile-outer">
+                    <Link className="tile-container" to={`/song/${song.id}`}>
+                      <img className="tile-image" src={song.image}></img>
+                    </Link>
+                    <button
+                      // className="tile-container"
+                      className="play-button"
+                      onClick={() => {
+                        dispatch(singleSong(song.id));
+                      }}
+                    >
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <p className="song-title">{song.title}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

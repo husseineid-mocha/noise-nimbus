@@ -1,11 +1,18 @@
+.dark-background {
+    background: #333;
+    height: 46px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
 .song-show-page {
-    min-width: 1240px;
-    width: 1240px;
+    width: 70%;
     height: auto;
     margin: 0 auto;
-    margin-top: 46px;
+    margin-top: 57px;
     font-family: "Open Sans", sans-serif;
-    min-width: 920px;
+    overflow: hidden;
 }
 
 .song-show-page a {
@@ -16,7 +23,7 @@
     display: flex;
     width: 100%;
     height: 380px;
-    /* background: linear-gradient(to top right, #da0997, rgb(255, 133, 200)); */
+    background: linear-gradient(to top right, #cf0072, #63d2ba);
 }
 
 .song-banner-info {
@@ -28,7 +35,7 @@
     height: 340px;
     width: 340px;
     box-sizing: border-box;
-    margin: 20px 0 20px 30px;
+    margin: 20px 0 20px 130px;
     border: 1px solid gray;
     /* background: linear-gradient(to top right, #da0997, rgb(255, 133, 200)); */
     position: relative;
@@ -36,8 +43,8 @@
 
 .song-banner-photo img {
     object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .song-show-photo {
@@ -73,6 +80,7 @@
     font-size: 15.4px;
     margin-top: 28px;
     padding: 4px 6px 5px 6px;
+    color: #ccc;
 }
 
 .song-banner-created-at {
@@ -94,7 +102,7 @@
     background: black;
     font-size: 22.8px;
     padding: 8px 7px;
-    color: #da0997;
+    color: #ccc;
 }
 
 .song-banner-genre {
@@ -132,7 +140,7 @@
     display: flex;
     align-items: center;
     padding-left: 5px;
-    width: 770px;
+    width: 815px;
     border: 1px solid #e5e5e5;
     transition: background 0.3s, border 0.3s;
 }
@@ -171,12 +179,12 @@
 
 .song-comments-form:focus-within {
     background: #da0997;
-    border: 1px solid rgb(0, 207, 207);
+    border: 1px solid #ccc;
 }
 
 .song-comments-form input:focus {
     outline: none;
-    border: 1px solid rgb(0, 207, 207);
+    border: 1px solid #ccc;
 }
 
 .song-comments-stats {
@@ -405,7 +413,7 @@
 
 .song-desc-and-comments {
     width: 670px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .song-desc {
@@ -414,14 +422,22 @@
 }
 
 .comments-header {
-    margin-top: 26px;
+    margin-top: 0px;
     color: #999;
     font-size: 14px;
-    margin-left: 7px;
+    margin-left: 0px;
     padding-bottom: 7px;
     border-bottom: 1px solid #f2f2f2;
     height: 21px;
     line-height: 1.3;
+    /* margin: 0 auto; */
+    margin-bottom: 10px;
+    width: 800px;
+    display: flex;
+}
+
+.comment-count {
+    margin-left: 5px;
 }
 
 .comments-header svg {
@@ -443,68 +459,37 @@
     margin-right: 10px;
 }
 
-.comment-item-photo div {
+
+/* .comment-item-photo div {
     height: 40px;
     width: 40px;
     max-height: 40px;
     max-width: 40px;
     border-radius: 50%;
     background: linear-gradient(to top left, rgb(255, 133, 200), #da0997);
-}
+} */
 
-.comment-item-photo img {
+
+/* .comment-item-photo img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-}
+} */
 
-.comment-item-header,
+
+/* .comment-item-header,
 .comment-item-header a {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #999;
     height: 17px;
-}
+} */
 
-.comment-item-header a:hover {
+
+/* .comment-item-header a:hover {
     color: #333;
-}
-
-.comment-item-body {
-    display: flex;
-    min-height: 23px;
-    color: #333;
-    justify-content: space-between;
-    position: relative;
-}
-
-.comment-item-body div {
-    max-width: 503px;
-    top: 3px;
-    font-size: 12px;
-    line-height: 1.3;
-    margin-top: 2px;
-}
-
-.comment-item-body button {
-    outline: none;
-    border: 1px solid #e5e5e5;
-    padding: 2px 9px;
-    max-width: 25px;
-    max-height: 22px;
-    height: 22px;
-    width: 25px;
-    background: white;
-    font-size: 11px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-radius: 3px;
-}
+} */
 
 .comment-item-body button:hover {
     border: 1px solid #ccc;

@@ -60,42 +60,10 @@ button.demo-login-button {
     transform: translateX(-100px);
 }
 
-
-/* 
-@keyframes modal-fadein {
-    from {
-        background: transparent;
-    }
-    to {
-        background: rgba(235, 235, 235, 0.9);
-    }
-}
-
-@keyframes scrolldown {
-    from {
-        top: -100%;
-        bottom: -100%;
-    }
-    to {
-        top: 8%;
-        bottom: 0%;
-    }
-} */
-
 .modal-box {
     display: flex;
     position: fixed;
 }
-
-
-/* .auth-method-separator:after,
-.auth-method-separator:before {
-    display: inline-block;
-    width: 43%;
-    border-top: 1px solid #333;
-    position: absolute;
-    top: 0.7em;
-} */
 
 .auth-method-separator {
     margin: 1em auto;
@@ -112,4 +80,28 @@ button.demo-login-button {
     justify-content: center;
     font-size: 24px;
     margin-bottom: 26px;
+}
+
+.before-or {
+    display: inline-block;
+    position: relative;
+    right: 30px;
+    width: 160px;
+    top: 100px;
+    border-top: 1px solid #333;
+    content: " ";
+    position: absolute;
+    top: 0.7em;
+}
+
+.after-or {
+    display: inline-block;
+    position: relative;
+    left: 30px;
+    width: 160px;
+    top: 100px;
+    border-top: 1px solid #333;
+    content: " ";
+    position: absolute;
+    top: 0.7em;
 }

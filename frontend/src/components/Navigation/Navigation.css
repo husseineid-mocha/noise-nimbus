@@ -1,13 +1,24 @@
 .navbarContainer {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
-    width: 100%;
+    width: 70%;
     line-height: 3.2;
     font-size: 14px;
     display: flex;
     justify-content: center;
     margin: 0px -16px;
     z-index: 1000000;
+    left: 15%;
+}
+
+
+/* .dark-background {
+    background: #333;
+} */
+
+.container {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .navbar {
@@ -17,12 +28,12 @@
     top: 0;
     background-color: #333;
     height: 46px;
-    width: 2000px;
+    width: 70%;
     min-width: 1240px;
     line-height: 3.2;
     font-size: 14px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     z-index: 10;
     max-height: 46px;
 }
@@ -47,16 +58,18 @@
 }
 
 .navbar-search {
-    width: 430px;
+    width: auto;
     padding: 0 10px;
     display: flex;
+    flex: 1 auto;
     position: relative;
     align-items: center;
+    flex: 1 auto;
 }
 
 .navbar-search-input {
     height: 26px;
-    width: 430px;
+    width: 100%;
     background: lightgray;
     outline: none;
     border: none;

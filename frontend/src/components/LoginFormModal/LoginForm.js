@@ -89,7 +89,9 @@ function LoginForm() {
             Sign In
           </button>
           <div className="auth-method-separator">
+            <div className="before-or"></div>
             <span>or</span>
+            <div className="after-or"></div>
           </div>
           <button
             className="demo-login-button"

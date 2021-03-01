@@ -19,7 +19,7 @@ function Navigation({ isLoaded }) {
   }
 
   return (
-    <div className="navbarContainer">
+    <div className="container navbarContainer">
       <div className="navbar">
         <Link className="navbar-logo" to="/dashboard"></Link>
         <Link className="navbar-left-link upgrade" to="/dashboard">
