@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "./carousel.css";
 import { activateSignUp } from "../../store/modal";
-import Stock1 from "./INEEDAJOB.png";
+import Stock1 from "./stock-image-1.jpg";
 import Stock2 from "./stock-image-2.jpg";
 import Stock3 from "./stock-image-3.jpg";
 
