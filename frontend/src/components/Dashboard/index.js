@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { songs, singleSong } from "../../store/songs";
 import { useEffect } from "react";
 import MusicPlayer from "../MusicPlayer";
+// import MusicPlayer2 from "../MusicPlayer2";
 import Navigation from "../Navigation";
 import "./dashboard.css";
 
@@ -12,7 +13,8 @@ function Dashboard({ isLoaded }) {
   const history = useHistory();
   const songsState = useSelector((state) => state.song.songs);
   const song = useSelector((state) => state.song.currentSong);
-  console.log(songs);
+  // const [tracks, setTracks] = useState([])
+  console.log(songsState);
 
   useEffect(() => dispatch(singleSong(1)), []);
   // console.log(songsState);
@@ -27,7 +29,7 @@ function Dashboard({ isLoaded }) {
       <div className="dark-background">
         <Navigation isLoaded={isLoaded} />
       </div>
-      <MusicPlayer />
+      {/* <MusicPlayer2 tracks={songsState} /> */}
       <div className="dashboard">
         <div className="dashboard-main">
           <div className="dashboard-content">

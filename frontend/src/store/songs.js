@@ -32,20 +32,7 @@ export const songs = (songs) => async (dispatch) => {
 };
 
 const initialState = {
-  songs: [
-    // {
-    //   artistId: 3,
-    //   audioFile:
-    //     "https://noisenimbussongs.s3.amazonaws.com/Eminem+-+Mockingbird.mp3",
-    //   createdAt: "2021-02-23T18:47:03.463Z",
-    //   description: "",
-    //   genreId: 2,
-    //   id: 0,
-    //   image: "https://noisenimbussongs.s3.amazonaws.com/The_Eminem_Show.jpg",
-    //   title: "Mockingbird",
-    //   updatedAt: "2021-02-23T18:47:03.463Z",
-    // },
-  ],
+  songs: [],
   activeSongId: -1,
 };
 
