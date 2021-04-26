@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { songs, singleSong } from "../../store/songs";
 import { useEffect } from "react";
 import MusicPlayer from "../MusicPlayer";
-// import MusicPlayer2 from "../MusicPlayer2";
+import MusicPlayer2 from "../MusicPlayer2";
 import Navigation from "../Navigation";
 import "./dashboard.css";
 
@@ -29,7 +29,7 @@ function Dashboard({ isLoaded }) {
       <div className="dark-background">
         <Navigation isLoaded={isLoaded} />
       </div>
-      {/* <MusicPlayer2 tracks={songsState} /> */}
+      {songsState.length > 0 && <MusicPlayer2 tracks={songsState} />}
       <div className="dashboard">
         <div className="dashboard-main">
           <div className="dashboard-content">
@@ -41,7 +41,7 @@ function Dashboard({ isLoaded }) {
               </div>
               <div className="weekly-song-list">
                 {songsState
-                  ? songsState.map((song) => (
+                  ? songsState.map((song, idx) => (
                       <button
                         className="more-of-what-you-like-button"
                         onClick={() => {

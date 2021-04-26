@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 
+import Controls from "./Controls";
+import "./MusicPlayer2.css";
+
 const MusicPlayer2 = () => {
   const tracks = useSelector((state) => state?.song?.songs);
   console.log(tracks);
@@ -17,12 +20,28 @@ const MusicPlayer2 = () => {
   const { duration } = audioRef.current;
 
   const toPrevTrack = () => {
-    console.log("TODO go to prev");
+    if (trackIndex - 1 < 0) {
+      setTrackIndex(tracks.length - 1);
+    } else {
+      setTrackIndex(trackIndex - 1);
+    }
   };
 
   const toNextTrack = () => {
-    console.log("TODO go to next");
+    if (trackIndex < tracks.length - 1) {
+      setTrackIndex(trackIndex + 1);
+    } else {
+      setTrackIndex(0);
+    }
   };
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying]);
 
   return (
     tracks && (
@@ -35,6 +54,12 @@ const MusicPlayer2 = () => {
           />
           <h2 className="title">{title}</h2>
           <h3 className="artist">{artistName}</h3>
+          <Controls
+            isPlaying={isPlaying}
+            onPrevClick={toPrevTrack}
+            onNextClick={toNextTrack}
+            onPlayPauseClick={setIsPlaying}
+          />
         </div>
       </div>
     )
