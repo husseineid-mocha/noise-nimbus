@@ -1,1 +1,14 @@
 /* TODO Add site wide styles */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 101%;
+    z-index: 300;
+    height: 100px;
+    background-color: #f0f0f0;
+    border-top: thin solid rgba(255, 255, 255, 0.13);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -5px 5px -5px #333;
+}

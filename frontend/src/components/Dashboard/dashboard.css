@@ -2,14 +2,14 @@
     background: #333;
     height: 46px;
     position: fixed;
-    width: 100%;
+    width: 101%;
     top: 0;
 }
 
 .dashboard {
     min-width: 1240px;
     width: 70%;
-    height: 1141px;
+    height: 75em;
     margin: 0 auto;
     margin-top: 46px;
     padding: 0 30px;
@@ -177,4 +177,8 @@ button.play-button {
 
 .tile-outer {
     position: relative;
+}
+
+.musicPlayerFooter {
+    display: none;
 }

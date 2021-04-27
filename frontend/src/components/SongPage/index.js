@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { songs, singleSong } from "../../store/songs";
-import MusicPlayer from "../MusicPlayer";
+import MusicPlayer2 from "../MusicPlayer2";
 import Navigation from "../Navigation";
 import Comment from "../Comment";
 import {
@@ -20,7 +20,7 @@ function SongPage(props) {
   const song = useSelector((state) => state.song.currentSong);
   const sessionUser = useSelector((state) => state.session.user);
   const comments = useSelector((state) => state.comment);
-  console.log(comments);
+  // console.log(comments);
 
   useEffect(() => {
     dispatch(getSongComments(props.match.params.id));
@@ -46,8 +46,8 @@ function SongPage(props) {
     Object.values(comments).length > 0 ? (
       <div className="comments-section">
         <div className="comments-header">
-          <i class="fas fa-comment-alt"></i>
-          <div class="comment-count">
+          <i className="fas fa-comment-alt"></i>
+          <div className="comment-count">
             {comments.length} {comments.length === 1 ? "comment" : "comments"}
           </div>
         </div>

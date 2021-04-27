@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { songs, singleSong } from "../../store/songs";
-import { useEffect } from "react";
 import MusicPlayer from "../MusicPlayer";
 import MusicPlayer2 from "../MusicPlayer2";
 import Navigation from "../Navigation";
@@ -11,25 +10,45 @@ import "./dashboard.css";
 function Dashboard({ isLoaded }) {
   const dispatch = useDispatch();
   const history = useHistory();
-  const songsState = useSelector((state) => state.song.songs);
-  const song = useSelector((state) => state.song.currentSong);
-  // const [tracks, setTracks] = useState([])
-  console.log(songsState);
 
-  useEffect(() => dispatch(singleSong(1)), []);
-  // console.log(songsState);
+  const [trackIndex, setTrackIndex] = useState(0);
+
+  const activeIndex = useSelector((state) => state.song.activeSongId);
+  let allSongs = useSelector((state) => state?.song?.songs);
+  const song = useSelector((state) => state.song.currentSong);
+  console.log(allSongs);
 
   useEffect(() => {
     dispatch(songs());
     // dispatch(singleSong(song.id));
   }, []);
 
+  useEffect(() => dispatch(singleSong(1)), []);
+  // console.log(songsState);
+
+  const handleClick = (idx) => {
+    if (document.querySelector(".musicPlayerFooter")) {
+      document
+        .querySelector(".musicPlayerFooter")
+        .classList.remove("musicPlayerFooter");
+    }
+    setTrackIndex(idx);
+  };
+
   return (
     <div>
+      {allSongs.length > 0 && (
+        <footer className="musicPlayerFooter">
+          <MusicPlayer2
+            tracks={allSongs}
+            trackIndex={trackIndex}
+            setTrackIndex={setTrackIndex}
+          />
+        </footer>
+      )}
       <div className="dark-background">
         <Navigation isLoaded={isLoaded} />
       </div>
-      {songsState.length > 0 && <MusicPlayer2 tracks={songsState} />}
       <div className="dashboard">
         <div className="dashboard-main">
           <div className="dashboard-content">
@@ -40,13 +59,11 @@ function Dashboard({ isLoaded }) {
                 <img className="weekly-photo" src={song?.image} />
               </div>
               <div className="weekly-song-list">
-                {songsState
-                  ? songsState.map((song, idx) => (
+                {allSongs
+                  ? allSongs.map((song, idx) => (
                       <button
                         className="more-of-what-you-like-button"
-                        onClick={() => {
-                          dispatch(singleSong(song.id));
-                        }}
+                        onClick={() => handleClick(idx)}
                       >
                         <div className="small-list">
                           <div className="small-image-and-title">
@@ -83,9 +100,9 @@ function Dashboard({ isLoaded }) {
             <h1>Charts: Top 10</h1>
             <p>The latest hits, updated all the time</p>
             <div className="dashboard-top">
-              {/* {console.log("FLLLLLAAAAAAAGGGGGG", songsState)} */}
-              {songsState
-                ? songsState.map((song) => (
+              {/* {console.log("FLLLLLAAAAAAAGGGGGG", allSongs)} */}
+              {allSongs
+                ? allSongs.map((song, idx) => (
                     <div>
                       <div className="button-outer"></div>
                       <div className="tile-outer">
@@ -98,11 +115,9 @@ function Dashboard({ isLoaded }) {
                         <button
                           // className="tile-container"
                           className="play-button"
-                          onClick={() => {
-                            dispatch(singleSong(song.id));
-                          }}
+                          onClick={() => handleClick(idx)}
                         >
-                          <i class="fas fa-play"></i>
+                          <i className="fas fa-play"></i>
                         </button>
                         <p className="song-title">{song.title}</p>
                       </div>
@@ -116,7 +131,7 @@ function Dashboard({ isLoaded }) {
             <h1>Scenes</h1>
             <p>Discover tomorrow's sounds today</p>
             <div className="dashboard-new">
-              {songsState?.map((song) => (
+              {allSongs?.map((song, idx) => (
                 <div>
                   <div className="button-outer"></div>
                   <div className="tile-outer">
@@ -126,11 +141,9 @@ function Dashboard({ isLoaded }) {
                     <button
                       // className="tile-container"
                       className="play-button"
-                      onClick={() => {
-                        dispatch(singleSong(song.id));
-                      }}
+                      onClick={() => handleClick(idx)}
                     >
-                      <i class="fas fa-play"></i>
+                      <i className="fas fa-play"></i>
                     </button>
                     <p className="song-title">{song.title}</p>
                   </div>
