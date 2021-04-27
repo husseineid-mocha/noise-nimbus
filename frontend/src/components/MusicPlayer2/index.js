@@ -5,7 +5,7 @@ import Controls from "./Controls";
 import "./MusicPlayer2.css";
 
 const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
-  debugger;
+  //   debugger;
   //   const tracks = useSelector((state) => state?.song?.songs);
   //   console.log(tracks);
 
@@ -120,80 +120,88 @@ const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
     `;
 
   return (
-    <footer>
-      <div className="music-player-container">
-        <div className="music-player-track-info">
-          <div className="music-player-art-container">
-            {image && (
-              <img className="music-player-art" src={image} alt="track art" />
-            )}
-          </div>
-          <div className="music-player-track-details">
-            <div className="music-player-title-container">
-              <p>{title}</p>
+    <>
+      {/* <div>
+        <div className="sp-music-player-controls-container controlsDisplay2">
+          <Controls2 isPlaying={isPlaying} onPlayPauseClick={setIsPlaying} />
+        </div>
+      </div> */}
+      <footer>
+        <div className="music-player-container">
+          <div className="music-player-track-info">
+            <div className="music-player-art-container">
+              {image && (
+                <img className="music-player-art" src={image} alt="track art" />
+              )}
             </div>
-            <div className="music-player-artist-container">
-              <p>{artistName}</p>
+            <div className="music-player-track-details">
+              <div className="music-player-title-container">
+                <p>{title}</p>
+              </div>
+              <div className="music-player-artist-container">
+                <p>{artistName}</p>
+              </div>
+            </div>
+          </div>
+          <div className="music-player-handling-container">
+            <div className="music-player-controls-container controlsDisplay">
+              <Controls
+                isPlaying={isPlaying}
+                toPrevTrack={toPrevTrack}
+                toNextTrack={toNextTrack}
+                onPlayPauseClick={setIsPlaying}
+              />
+            </div>
+
+            <div className="music-player-progress-container">
+              <div className="music-player-progress-start">
+                <p>
+                  {trackProgress
+                    ? new Date(trackProgress * 1000).toISOString().substr(15, 4)
+                    : "0:00"}
+                </p>
+              </div>
+              <input
+                type="range"
+                value={trackProgress}
+                step="1"
+                min="0"
+                max={duration ? duration : `${duration}`}
+                className="progress slider"
+                onChange={(e) => onScrub(e.target.value)}
+                onMouseUp={onScrubEnd}
+                onKeyUp={onScrubEnd}
+                style={{ background: trackStyling, height: "4px" }}
+              />
+              <div className="music-player-progress-end">
+                <p>
+                  {duration
+                    ? new Date(duration * 1000).toISOString().substr(15, 4)
+                    : "0:00"}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="music-player-volume-container">
+            <div className="music-player-vol-icon">
+              <i className="fas fa-volume-up" />
+            </div>
+            <div className="music-player-vol-slider">
+              <input
+                type="range"
+                value={vol}
+                step="0.01"
+                min="0"
+                max="1"
+                className="volume slider"
+                onChange={(e) => setVol(e.target.value)}
+                style={{ background: volStyling, height: "4px" }}
+              />
             </div>
           </div>
         </div>
-        <div className="music-player-handling-container">
-          <div className="music-player-controls-container">
-            <Controls
-              isPlaying={isPlaying}
-              toPrevTrack={toPrevTrack}
-              toNextTrack={toNextTrack}
-              onPlayPauseClick={setIsPlaying}
-            />
-          </div>
-          <div className="music-player-progress-container">
-            <div className="music-player-progress-start">
-              <p>
-                {trackProgress
-                  ? new Date(trackProgress * 1000).toISOString().substr(15, 4)
-                  : "0:00"}
-              </p>
-            </div>
-            <input
-              type="range"
-              value={trackProgress}
-              step="1"
-              min="0"
-              max={duration ? duration : `${duration}`}
-              className="progress slider"
-              onChange={(e) => onScrub(e.target.value)}
-              onMouseUp={onScrubEnd}
-              onKeyUp={onScrubEnd}
-              style={{ background: trackStyling, height: "4px" }}
-            />
-            <div className="music-player-progress-end">
-              <p>
-                {duration
-                  ? new Date(duration * 1000).toISOString().substr(15, 4)
-                  : "0:00"}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="music-player-volume-container">
-          <div className="music-player-vol-icon">
-            <i className="fas fa-volume-up" />
-          </div>
-          <div className="music-player-vol-slider">
-            <input
-              type="range"
-              value={vol}
-              step="0.01"
-              min="0"
-              max="1"
-              className="volume slider"
-              onChange={(e) => setVol(e.target.value)}
-              style={{ background: volStyling, height: "4px" }}
-            />
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 

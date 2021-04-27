@@ -32,6 +32,11 @@ function Dashboard({ isLoaded }) {
         .querySelector(".musicPlayerFooter")
         .classList.remove("musicPlayerFooter");
     }
+    if (document.querySelector(".music-player-controls-container")) {
+      document
+        .querySelector(".music-player-controls-container")
+        .classList.remove("controlsDisplay");
+    }
     setTrackIndex(idx);
   };
 

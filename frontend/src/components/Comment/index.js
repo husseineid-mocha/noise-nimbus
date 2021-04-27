@@ -7,20 +7,24 @@ export default function Comment(props) {
   const dispatch = useDispatch();
 
   const userId = useSelector((state) => state.session.user.id);
+  const userName = useSelector((state) => state.session.user.username);
   console.log(props);
 
   const canDelete = userId === props.userId;
 
   return (
     <div className="comment-item-body">
-      <div className="comment-item-content">{props.body}</div>
+      <div className="comment-nameAndBody">
+        <div className="comment-userName">{userName}</div>
+        <div className="comment-item-content">{props.body}</div>
+      </div>
       {canDelete && (
-        <button
+        <div
           className="delete-button"
           onClick={() => dispatch(deleteAComment(props.id))}
         >
-          X
-        </button>
+          <i class="fas fa-trash-alt fa-lg"></i>
+        </div>
       )}
     </div>
   );

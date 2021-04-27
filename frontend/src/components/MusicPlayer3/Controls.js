@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./MusicPlayer2.css";
+import "./MusicPlayer3.css";
 
 const Controls = ({
   isPlaying,
@@ -8,15 +8,7 @@ const Controls = ({
   toPrevTrack,
   toNextTrack,
 }) => (
-  <div className="audio-controls">
-    <button
-      type="button"
-      className="prev"
-      aria-label="Previous"
-      onClick={toPrevTrack}
-    >
-      <i className="fas fa-step-backward" />
-    </button>
+  <div className="audio-controls2">
     {isPlaying ? (
       <button
         type="button"
@@ -24,7 +16,7 @@ const Controls = ({
         onClick={() => onPlayPauseClick(false)}
         aria-label="Pause"
       >
-        <i className="fas fa-pause-circle" />
+        <i className="fas fa-pause-circle pauseCircle" />
       </button>
     ) : (
       <button
@@ -33,17 +25,9 @@ const Controls = ({
         onClick={() => onPlayPauseClick(true)}
         aria-label="Play"
       >
-        <i className="fas fa-play-circle" />
+        <i className="fas fa-play-circle playCircle" />
       </button>
     )}
-    <button
-      type="button"
-      className="next"
-      aria-label="Next"
-      onClick={toNextTrack}
-    >
-      <i className="fas fa-step-forward" />
-    </button>
   </div>
 );
 

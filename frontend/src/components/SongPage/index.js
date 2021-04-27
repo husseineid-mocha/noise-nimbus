@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory, Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { songs, singleSong } from "../../store/songs";
-import MusicPlayer2 from "../MusicPlayer2";
+import MusicPlayer3 from "../MusicPlayer3";
 import Navigation from "../Navigation";
 import Comment from "../Comment";
 import {
@@ -20,7 +20,17 @@ function SongPage(props) {
   const song = useSelector((state) => state.song.currentSong);
   const sessionUser = useSelector((state) => state.session.user);
   const comments = useSelector((state) => state.comment);
+  let allSongs = useSelector((state) => state?.song?.songs);
   // console.log(comments);
+
+  const [trackIndex, setTrackIndex] = useState(0);
+  const { id } = useParams();
+  console.log(trackIndex);
+  useEffect(() => {
+    setTrackIndex(id - 1);
+  }, []);
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
     dispatch(getSongComments(props.match.params.id));
@@ -81,6 +91,15 @@ function SongPage(props) {
               <div className="song-banner-bottom">
                 <h1 className="song-banner-title">{song?.title}</h1>
               </div>
+              {allSongs.length > 0 && (
+                <div className="mp-container">
+                  <MusicPlayer3
+                    tracks={allSongs}
+                    trackIndex={trackIndex}
+                    setTrackIndex={setTrackIndex}
+                  />
+                </div>
+              )}
             </div>
 
             <div className="song-banner-photo">

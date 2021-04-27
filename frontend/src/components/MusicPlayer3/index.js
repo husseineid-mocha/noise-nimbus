@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 
 import Controls from "./Controls";
-import "./MusicPlayer2.css";
+import "./MusicPlayer3.css";
 
 const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
   debugger;
@@ -21,22 +21,22 @@ const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
   const isReady = useRef(false);
   const { duration } = audioRef.current;
 
-  const toPrevTrack = () => {
-    if (trackIndex - 1 < 0) {
-      setTrackIndex(tracks.length - 1);
-    } else {
-      setTrackIndex(trackIndex - 1);
-    }
-  };
+  // const toPrevTrack = () => {
+  //   if (trackIndex - 1 < 0) {
+  //     setTrackIndex(tracks.length - 1);
+  //   } else {
+  //     setTrackIndex(trackIndex - 1);
+  //   }
+  // };
 
-  const toNextTrack = () => {
-    console.log("hello");
-    if (trackIndex < tracks.length - 1) {
-      setTrackIndex(trackIndex + 1);
-    } else {
-      setTrackIndex(0);
-    }
-  };
+  // const toNextTrack = () => {
+  //   console.log("hello");
+  //   if (trackIndex < tracks.length - 1) {
+  //     setTrackIndex(trackIndex + 1);
+  //   } else {
+  //     setTrackIndex(0);
+  //   }
+  // };
 
   const startTimer = () => {
     // Clear any timers already running
@@ -44,7 +44,7 @@ const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
 
     intervalRef.current = setInterval(() => {
       if (audioRef.current.ended) {
-        toNextTrack();
+        // toNextTrack();
       } else {
         setTrackProgress(audioRef.current.currentTime);
       }
@@ -107,93 +107,76 @@ const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
   const currentPercentage = duration
     ? `${(trackProgress / duration) * 100}%`
     : "0%";
-  const trackStyling = `
+  const trackStyling2 = `
     -webkit-gradient(linear, 0% 0%, 100% 0%,
-      color-stop(${currentPercentage}, #505050),
+      color-stop(${currentPercentage}, black),
       color-stop(${currentPercentage}, #e1e1e1))
   `;
   const curVolPercentage = `${vol * 100}%`;
-  const volStyling = `
+  const volStyling2 = `
       -webkit-gradient(linear, 0% 0%, 100% 0%,
-        color-stop(${curVolPercentage}, #505050),
+        color-stop(${curVolPercentage}, black),
         color-stop(${curVolPercentage}, #e1e1e1))
     `;
 
   return (
-    <footer>
-      <div className="music-player-container">
-        <div className="music-player-track-info">
-          <div className="music-player-art-container">
-            {image && (
-              <img className="music-player-art" src={image} alt="track art" />
-            )}
-          </div>
-          <div className="music-player-track-details">
-            <div className="music-player-title-container">
-              <p>{title}</p>
-            </div>
-            <div className="music-player-artist-container">
-              <p>{artistName}</p>
-            </div>
-          </div>
+    <div className="music-player-container2">
+      <div className="music-player-handling-container2">
+        <div className="music-player-controls-container2">
+          <Controls
+            isPlaying={isPlaying}
+            // toPrevTrack={toPrevTrack}
+            // toNextTrack={toNextTrack}
+            onPlayPauseClick={setIsPlaying}
+          />
         </div>
-        <div className="music-player-handling-container">
-          <div className="music-player-controls-container">
-            <Controls
-              isPlaying={isPlaying}
-              toPrevTrack={toPrevTrack}
-              toNextTrack={toNextTrack}
-              onPlayPauseClick={setIsPlaying}
-            />
+        <div className="music-player-progress-container2">
+          <div className="music-player-progress-start2">
+            <p>
+              {trackProgress
+                ? new Date(trackProgress * 1000).toISOString().substr(15, 4)
+                : "0:00"}
+            </p>
           </div>
-          <div className="music-player-progress-container">
-            <div className="music-player-progress-start">
-              <p>
-                {trackProgress
-                  ? new Date(trackProgress * 1000).toISOString().substr(15, 4)
-                  : "0:00"}
-              </p>
-            </div>
-            <input
-              type="range"
-              value={trackProgress}
-              step="1"
-              min="0"
-              max={duration ? duration : `${duration}`}
-              className="progress slider"
-              onChange={(e) => onScrub(e.target.value)}
-              onMouseUp={onScrubEnd}
-              onKeyUp={onScrubEnd}
-              style={{ background: trackStyling, height: "4px" }}
-            />
-            <div className="music-player-progress-end">
-              <p>
-                {duration
-                  ? new Date(duration * 1000).toISOString().substr(15, 4)
-                  : "0:00"}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="music-player-volume-container">
-          <div className="music-player-vol-icon">
-            <i className="fas fa-volume-up" />
-          </div>
-          <div className="music-player-vol-slider">
-            <input
-              type="range"
-              value={vol}
-              step="0.01"
-              min="0"
-              max="1"
-              className="volume slider"
-              onChange={(e) => setVol(e.target.value)}
-              style={{ background: volStyling, height: "4px" }}
-            />
+          <input
+            type="range"
+            value={trackProgress}
+            step="1"
+            min="0"
+            max={duration ? duration : `${duration}`}
+            className="progress slider"
+            onChange={(e) => onScrub(e.target.value)}
+            onMouseUp={onScrubEnd}
+            onKeyUp={onScrubEnd}
+            style={{ background: trackStyling2, height: "4px" }}
+          />
+          <div className="music-player-progress-end2">
+            <p>
+              {duration
+                ? new Date(duration * 1000).toISOString().substr(15, 4)
+                : "0:00"}
+            </p>
           </div>
         </div>
       </div>
-    </footer>
+      <div className="music-player-volume-container2">
+        <div className="music-player-vol-icon">
+          <i className="fas fa-volume-up" />
+        </div>
+        <div className="music-player-vol-slider">
+          <input
+            type="range"
+            value={vol}
+            step="0.01"
+            min="0"
+            max="1"
+            className="volume slider"
+            onChange={(e) => setVol(e.target.value)}
+            style={{ background: volStyling2, height: "4px" }}
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 

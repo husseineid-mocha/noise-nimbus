@@ -10,7 +10,7 @@ function SongsContainer({ song }) {
   }
   return (
     <div className="tile-container">
-      <img src={song.image}></img>
+      <img src={song.image} onClick={modalIsOpenSignUp}></img>
       <p className="song-title">{song.title}</p>
     </div>
   );

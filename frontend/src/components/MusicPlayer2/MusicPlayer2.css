@@ -231,3 +231,11 @@ input[type="range"] {
     transition: background 0.2s ease;
     cursor: pointer;
 }
+
+.controlsDisplay {
+    display: none;
+}
+
+.controlsDisplay2 {
+    display: none;
+}
