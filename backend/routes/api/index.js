@@ -3,11 +3,13 @@ const sessionRouter = require("./session.js");
 const usersRouter = require("./users.js");
 const songRouter = require("./songs.js");
 const commentRouter = require("./comment.js");
+const songUploadRouter = require("./songUpload.js");
 
 router.use("/session", sessionRouter);
 router.use("/songs", songRouter);
 router.use("/users", usersRouter);
 router.use("/comment", commentRouter);
+router.use("/songUpload", songUploadRouter);
 
 module.exports = router;
 
