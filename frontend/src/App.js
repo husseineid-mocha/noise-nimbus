@@ -31,7 +31,7 @@ function App() {
           <Route path="/users/:id" exact={true}>
             <User isLoaded={isLoaded} />
           </Route>
-          <Route path="/users/upload" exact={true}>
+          <Route path="/upload" exact={true}>
             <Upload isLoaded={isLoaded} />
           </Route>
           <Route
