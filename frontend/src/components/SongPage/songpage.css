@@ -100,9 +100,10 @@
 .song-banner-title {
     display: inline-block;
     background: black;
-    font-size: 22.8px;
+    font-size: 25px;
     padding: 8px 7px;
     color: #ccc;
+    font-weight: bolder;
 }
 
 .song-banner-genre {
@@ -474,5 +475,3 @@
     top: 30px;
     left: 30px;
 }
-
-.mp-container {}

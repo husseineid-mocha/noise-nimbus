@@ -2,13 +2,14 @@ const express = require("express");
 const router = express.Router();
 
 const db = require("../../db/models");
-const { Song, Comment } = db;
+const { Song, Comment, User } = db;
 const { asyncHandler, csrfProtection } = require("./utils.js");
 
 router.get(
   "/",
   asyncHandler(async (req, res) => {
     const comments = await Comment.findAll();
+    console.log("XXXXXXXXX", comments);
     return res.json({
       comments,
     });
@@ -43,6 +44,8 @@ router.get(
       where: {
         songId: songId,
       },
+      include: User,
+      order: [["createdAt", "DESC"]],
     });
 
     return res.json({ comments });

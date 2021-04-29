@@ -15,7 +15,7 @@ export default function Comment(props) {
   return (
     <div className="comment-item-body">
       <div className="comment-nameAndBody">
-        <div className="comment-userName">{userName}</div>
+        <div className="comment-userName">{props.User.username}</div>
         <div className="comment-item-content">{props.body}</div>
       </div>
       {canDelete && (

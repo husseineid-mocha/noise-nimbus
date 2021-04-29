@@ -3,11 +3,13 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 // import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
-// import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
 import Dashboard from "./components/Dashboard";
-import MusicPlayer from "./components/MusicPlayer";
+import Upload from "./components/Upload";
+// import MusicPlayer from "./components/MusicPlayer";
 import SongPage from "./components/SongPage";
+import User from "./components/Users";
 
 function App() {
   const dispatch = useDispatch();
@@ -18,7 +20,6 @@ function App() {
 
   return (
     <>
-      {/* <Navigation isLoaded={isLoaded} /> */}
       {isLoaded && (
         <Switch>
           <Route exact path="/">
@@ -26,6 +27,12 @@ function App() {
           </Route>
           <Route path="/dashboard">
             <Dashboard isLoaded={isLoaded} />
+          </Route>
+          <Route path="/users/:id" exact={true}>
+            <User isLoaded={isLoaded} />
+          </Route>
+          <Route path="/users/upload" exact={true}>
+            <Upload isLoaded={isLoaded} />
           </Route>
           <Route
             path="/song/:id"

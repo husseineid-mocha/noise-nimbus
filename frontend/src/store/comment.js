@@ -3,6 +3,7 @@ import { csrfFetch } from "./csrf";
 export const CREATE_COMMENT = "comment/CREATE_COMMENT";
 export const ALL_COMMENTS = "comment/ALL_COMMENTS";
 export const DELETE_COMMENT = "comment/DELETE_COMMENT";
+export const COMMENT_USER = "comment/COMMENT_USER";
 
 const create = (payload) => {
   return {
@@ -29,6 +30,13 @@ const deleteComment = (commentId) => {
   return {
     type: DELETE_COMMENT,
     commentId,
+  };
+};
+
+const commentUser = (userId) => {
+  return {
+    type: COMMENT_USER,
+    commentUser,
   };
 };
 
@@ -64,6 +72,13 @@ export const deleteAComment = (id) => async (dispatch) => {
   dispatch(deleteComment(id));
 };
 
+export const getCommentUsers = (id) => async (dispatch) => {
+  const response = await csrfFetch(`/api/comment/user`);
+  const data = await response.json();
+  dispatch(commentUser(id));
+  return data;
+};
+
 const initialState = [];
 
 const commentReducer = (state = initialState, action) => {
@@ -74,6 +89,8 @@ const commentReducer = (state = initialState, action) => {
       return [...action.comments];
     case DELETE_COMMENT:
       return state.filter((comment) => comment.id !== action.commentId);
+    case COMMENT_USER:
+      return action.commentUser;
     default:
       return state;
   }

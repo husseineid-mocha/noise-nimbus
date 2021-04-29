@@ -89,7 +89,7 @@ function SongPage(props) {
               </div>
 
               <div className="song-banner-bottom">
-                <h1 className="song-banner-title">{song?.title}</h1>
+                <div className="song-banner-title">{song?.title}</div>
               </div>
               {allSongs.length > 0 && (
                 <div className="mp-container">

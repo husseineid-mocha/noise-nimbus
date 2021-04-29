@@ -1,6 +1,13 @@
 /* TODO Add site wide styles */
 
+
+/* 
+* {
+    font-family: "Overpass";
+} */
+
 footer {
+    font-family: "Overpass";
     position: fixed;
     bottom: 0;
     width: 101%;

@@ -12,7 +12,6 @@ import { activateSignUp } from "../../store/modal";
 import Carousel from "../Carousel";
 import { songs } from "../../store/songs";
 import SongsContainer from "../SongsContainer";
-import MusicPlayer from "../MusicPlayer";
 
 function Splash({ isLoaded }) {
   const dispatch = useDispatch();
