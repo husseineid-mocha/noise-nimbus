@@ -13,9 +13,10 @@ export default function Comment(props) {
   const canDelete = userId === props.userId;
 
   return (
+    // props.User.username && (
     <div className="comment-item-body">
       <div className="comment-nameAndBody">
-        <div className="comment-userName">{props.User.username}</div>
+        <div className="comment-userName">{props.User?.username}</div>
         <div className="comment-item-content">{props.body}</div>
       </div>
       {canDelete && (
@@ -27,5 +28,6 @@ export default function Comment(props) {
         </div>
       )}
     </div>
+    // )
   );
 }

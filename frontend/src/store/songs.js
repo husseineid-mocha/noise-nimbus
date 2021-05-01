@@ -50,7 +50,7 @@ export const addNewSong = (song) => async (dispatch) => {
   formData.append("genreId", genreId);
 
   if (audioFile) formData.append("audio", audioFile);
-
+  console.log(formData);
   const res = await fetch("/api/songUpload", {
     method: "POST",
     headers: {

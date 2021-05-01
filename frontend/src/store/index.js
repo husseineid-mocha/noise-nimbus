@@ -5,6 +5,7 @@ import modalReducer from "./modal";
 import songReducer from "./songs";
 import musicPlayerReducer from "./musicPlayer";
 import commentReducer from "./comment";
+import genreReducer from "./genre"
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   song: songReducer,
   musicPlayer: musicPlayerReducer,
   comment: commentReducer,
+  genre: genreReducer
 });
 
 let enhancer;

@@ -23,10 +23,17 @@ router.post(
     const { payload } = req.body;
     // console.log("PAAAAAAYLOOOOOAAAAD", payload.comment, payload.userId);
 
-    const comment = await Comment.create({
+    let comment = await Comment.create({
       body: payload.comment,
       userId: payload.userId,
       songId,
+    });
+
+    comment = await Comment.findOne({
+      where: {
+        id: comment.id,
+      },
+      include: User,
     });
 
     return res.json({ comment });

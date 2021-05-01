@@ -19,13 +19,16 @@ function SongPage(props) {
   const history = useHistory();
   const song = useSelector((state) => state.song.currentSong);
   const sessionUser = useSelector((state) => state.session.user);
-  const comments = useSelector((state) => state.comment);
+  let comments = useSelector((state) => state.comment);
   let allSongs = useSelector((state) => state?.song?.songs);
-  // console.log(comments);
+
+  comments = Object.values(comments).sort((a, b) =>
+    a.updatedAt > b.updatedAt ? -1 : 1
+  );
 
   const [trackIndex, setTrackIndex] = useState(0);
   const { id } = useParams();
-  console.log(trackIndex);
+  // console.log(trackIndex);
   useEffect(() => {
     setTrackIndex(id - 1);
   }, []);
@@ -36,7 +39,7 @@ function SongPage(props) {
     dispatch(getSongComments(props.match.params.id));
   }, []);
 
-  console.log(sessionUser);
+  // console.log(sessionUser);
   useEffect(() => {
     dispatch(singleSong(props.match.params.id));
   }, []);
