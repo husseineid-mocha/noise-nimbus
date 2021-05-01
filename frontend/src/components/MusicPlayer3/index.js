@@ -4,39 +4,36 @@ import { useSelector } from "react-redux";
 import Controls from "./Controls";
 import "./MusicPlayer3.css";
 
-const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
+const MusicPlayer3 = ({ trackIndex, setTrackIndex }) => {
+  //this is not the index it's the ID
   debugger;
-  //   const tracks = useSelector((state) => state?.song?.songs);
-  //   console.log(tracks);
 
-  //   const [trackIndex, setTrackIndex] = useState(0);
+  let tracks = useSelector((state) => state?.song?.songs);
+  console.log(tracks);
+  console.log(trackIndex);
   const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [vol, setVol] = useState(1);
 
-  const { title, artistName, image, audioFile } = tracks[trackIndex];
+  // let title, artistName, image, audioFile;
+
+  // if (tracks[trackIndex]) {
+  //   title = tracks[trackIndex].title;
+  //   artistName = tracks[trackIndex].artistName;
+  //   image = tracks[trackIndex].image;
+  //   audioFile = tracks[trackIndex].audioFile;
+  // }
+
+  let selectedSong = tracks.find((track) => track.id === trackIndex);
+
+  const { title, artistName, image, audioFile } = selectedSong;
+
+  console.log("XZXXXXXXXXXXXXXXXXXXXXXXX", title, audioFile);
 
   const audioRef = useRef(new Audio(audioFile));
   const intervalRef = useRef();
   const isReady = useRef(false);
   const { duration } = audioRef.current;
-
-  // const toPrevTrack = () => {
-  //   if (trackIndex - 1 < 0) {
-  //     setTrackIndex(tracks.length - 1);
-  //   } else {
-  //     setTrackIndex(trackIndex - 1);
-  //   }
-  // };
-
-  // const toNextTrack = () => {
-  //   console.log("hello");
-  //   if (trackIndex < tracks.length - 1) {
-  //     setTrackIndex(trackIndex + 1);
-  //   } else {
-  //     setTrackIndex(0);
-  //   }
-  // };
 
   const startTimer = () => {
     // Clear any timers already running
@@ -180,4 +177,4 @@ const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
   );
 };
 
-export default MusicPlayer2;
+export default MusicPlayer3;

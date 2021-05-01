@@ -38,6 +38,9 @@ function App() {
             path="/song/:id"
             component={(props) => <SongPage isLoaded={isLoaded} {...props} />}
           ></Route>
+          {/* <Route path="/song/uploadedSong">
+            <SongPage isLoaded={isLoaded} props={props} />
+          </Route> */}
         </Switch>
       )}
     </>

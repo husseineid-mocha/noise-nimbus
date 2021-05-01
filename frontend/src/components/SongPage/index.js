@@ -97,7 +97,7 @@ function SongPage(props) {
               {allSongs.length > 0 && (
                 <div className="mp-container">
                   <MusicPlayer3
-                    tracks={allSongs}
+                    // tracks={allSongs}
                     trackIndex={trackIndex}
                     setTrackIndex={setTrackIndex}
                   />

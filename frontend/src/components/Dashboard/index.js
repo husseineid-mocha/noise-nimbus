@@ -14,6 +14,7 @@ function Dashboard({ isLoaded }) {
 
   const activeIndex = useSelector((state) => state.song.activeSongId);
   let allSongs = useSelector((state) => state?.song?.songs);
+  console.log(allSongs);
   const song = useSelector((state) => state.song.currentSong);
   console.log(allSongs);
 
@@ -44,7 +45,7 @@ function Dashboard({ isLoaded }) {
       {allSongs.length > 0 && (
         <footer className="musicPlayerFooter">
           <MusicPlayer2
-            tracks={allSongs}
+            // tracks={allSongs}
             trackIndex={trackIndex}
             setTrackIndex={setTrackIndex}
           />

@@ -4,12 +4,15 @@ import { useSelector } from "react-redux";
 import Controls from "./Controls";
 import "./MusicPlayer2.css";
 
-const MusicPlayer2 = ({ tracks, trackIndex, setTrackIndex }) => {
+const MusicPlayer2 = ({ trackIndex, setTrackIndex }) => {
   //   debugger;
   //   const tracks = useSelector((state) => state?.song?.songs);
   //   console.log(tracks);
 
   //   const [trackIndex, setTrackIndex] = useState(0);
+  let tracks = useSelector((state) => state?.song?.songs);
+  console.log(tracks);
+
   const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [vol, setVol] = useState(1);

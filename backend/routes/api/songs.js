@@ -21,9 +21,7 @@ router.get(
   "/",
   csrfProtection,
   asyncHandler(async (req, res) => {
-    const songs = await Song.findAll({
-      limit: 12,
-    });
+    const songs = await Song.findAll();
 
     return res.json({
       songs,

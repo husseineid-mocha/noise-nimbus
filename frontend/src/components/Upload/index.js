@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import Navigation from "../Navigation";
 import { getGenres } from "../../store/genre";
-import { addNewSong } from "../../store/songs";
+import { addNewSong, songs } from "../../store/songs";
 
 import "./Upload.css";
 
@@ -13,8 +13,11 @@ function Upload({ isLoaded }) {
 
   const sessionUser = useSelector((state) => state.session.user);
   let genres = useSelector((state) => state?.genre?.genres?.genres);
-
-  //   console.log(genres.genres);
+  const songList = useSelector((state) => state.song.songs);
+  const newSong = useSelector((state) => state.song.newSong);
+  console.log(newSong);
+  console.log(songList[songList.length - 1]);
+  // console.log(songs[songs.length - 1].id);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -23,6 +26,7 @@ function Upload({ isLoaded }) {
   const [artistName, setArtistName] = useState("");
   const [audioFile, setAudioFile] = useState(null);
   const [inputErrors, setInputErrors] = useState([]);
+  const [clicked, setClicked] = useState(false);
 
   if (sessionUser === undefined) {
     history.push("/");
@@ -31,6 +35,11 @@ function Upload({ isLoaded }) {
   useEffect(() => {
     dispatch(getGenres());
   }, [dispatch]);
+
+  // useEffect(() => {
+  //   dispatch(songs());
+  //   history.push(`/song/${songList[songList.length - 1]}`);
+  // }, [clicked]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,8 +57,15 @@ function Upload({ isLoaded }) {
     console.log(track);
 
     const songDispatch = await dispatch(addNewSong(track));
+    dispatch(songs());
+    history.push(`/song/${songDispatch.newSong.id}`);
 
-    history.push(`/song/${songDispatch.id}`);
+    setClicked(true);
+
+    // setTimeout(() => {
+    //   // setLoaded(true);
+    //   history.push(`/song/${songDispatch.id}`);
+    // }, 1000);
   };
 
   return (
@@ -58,7 +74,7 @@ function Upload({ isLoaded }) {
         <Navigation isLoaded={isLoaded} />
       </div>
       <div className="uploadFormContainer">
-        <form onSubmit={handleSubmit} className="uploadForm">
+        <form onSubmit={(e) => handleSubmit(e)} className="uploadForm">
           <label className="uploadTextLabel">
             Title
             <input
