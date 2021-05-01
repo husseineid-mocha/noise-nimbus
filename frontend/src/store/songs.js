@@ -48,20 +48,23 @@ export const addNewSong = (song) => async (dispatch) => {
   formData.append("image", image);
   formData.append("artistName", artistName);
   formData.append("genreId", genreId);
+  formData.append("audio", audioFile);
 
-  if (audioFile) formData.append("audio", audioFile);
   console.log(formData);
-  const res = await fetch("/api/songUpload", {
+
+  const res = await csrfFetch("/api/songUpload", {
     method: "POST",
     headers: {
       "Content-Type": "multipart/form-data",
     },
     body: formData,
   });
+  const data = await res.json();
 
-  dispatch(addSong(res.data.addNewSong));
+  dispatch(addSong(data));
+  console.log(data);
 
-  return res.data.addNewSong;
+  return data;
 };
 
 const initialState = {

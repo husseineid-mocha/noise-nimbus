@@ -39,13 +39,13 @@ function Upload({ isLoaded }) {
     const track = {
       title,
       description,
-      imageUrl: image || "/img/trackDefault.jfif",
+      image: image || "/img/trackDefault.jfif",
       artistName,
       audioFile,
       userId: sessionUser.id,
       genreId,
     };
-    // console.log(track);
+    console.log(track);
 
     const songDispatch = await dispatch(addNewSong(track));
 
@@ -76,6 +76,17 @@ function Upload({ isLoaded }) {
               placeholder="Enter a description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              required
+              className="uploadDescription"
+            />
+          </label>
+          <label className="uploadArtistNameLabel">
+            Artist Name
+            <input
+              type="text"
+              placeholder="Enter Artist Name"
+              value={artistName}
+              onChange={(e) => setArtistName(e.target.value)}
               required
               className="uploadDescription"
             />

@@ -1,6 +1,6 @@
 import { csrfFetch } from "./csrf";
 
-const SET_GENRES = "ui/setGenres";
+const SET_GENRES = "genre/setGenres";
 
 const setGenres = (genres) => {
   return {
