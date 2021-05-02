@@ -15,6 +15,19 @@ const MusicPlayer3 = ({ trackIndex, setTrackIndex }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [vol, setVol] = useState(1);
 
+  // const [songs, setSongs] = useState([]);
+  // useEffect(() => {
+  //   async function fetchSongs() {
+  //     const res = await fetch(`/api/songs`);
+  //     const data = await res.json();
+  //     if (res.ok) setSongs(data);
+  //   }
+  //   fetchSongs();
+  // }, []);
+  // // let officialSong = songs.songs;
+
+  // console.log(songs);
+
   // let title, artistName, image, audioFile;
 
   // if (tracks[trackIndex]) {
@@ -26,9 +39,11 @@ const MusicPlayer3 = ({ trackIndex, setTrackIndex }) => {
 
   let selectedSong = tracks.find((track) => track.id === trackIndex + 1);
 
+  // if (!selectedSong) return null;
+
   const { title, artistName, image, audioFile } = selectedSong;
 
-  console.log("XZXXXXXXXXXXXXXXXXXXXXXXX", title, audioFile);
+  console.log("XZXXXXXXXXXXXXXXXXXXXXXXX", trackIndex, title, audioFile);
 
   const audioRef = useRef(new Audio(audioFile));
   const intervalRef = useRef();

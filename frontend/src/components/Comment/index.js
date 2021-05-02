@@ -8,7 +8,7 @@ export default function Comment(props) {
 
   const userId = useSelector((state) => state.session.user.id);
   const userName = useSelector((state) => state.session.user.username);
-  console.log(props);
+  // console.log(props);
 
   const canDelete = userId === props.userId;
 

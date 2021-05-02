@@ -121,7 +121,7 @@
     margin: 0px 0px 20px 20px;
     width: auto;
     height: 90%;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .weekly-song-list::-webkit-scrollbar {
@@ -131,7 +131,7 @@
     /* Optional: just make scrollbar invisible */
 }
 
-.weekly-song-list2::-webkit-scrollbar {
+.dashboard-sub-container::-webkit-scrollbar {
     width: 0px;
     /* Remove scrollbar space */
     background: transparent;
@@ -239,6 +239,7 @@ button.play-button {
     background: linear-gradient(45deg, #cf0072 0%, #8b61a8 100%);
     padding: 20px;
     height: 90%;
+    overflow: auto;
 }
 
 .dashboard-sub {

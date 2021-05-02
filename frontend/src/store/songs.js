@@ -62,15 +62,15 @@ export const addNewSong = (song) => async (dispatch) => {
   const data = await res.json();
 
   dispatch(addSong(data));
-  // dispatch(songs());
-  console.log(data);
+  await dispatch(songs());
+  // console.log(data);
 
   return data;
 };
 
 const initialState = {
   songs: [],
-  activeSongId: -1,
+  activeSongId: 0,
 };
 
 const songReducer = (state = initialState, action) => {

@@ -36,14 +36,14 @@
     width: 340px;
     box-sizing: border-box;
     margin: 20px 0 20px 30px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     /* background: linear-gradient(to top right, #da0997, rgb(255, 133, 200)); */
     /* position: relative; */
 }
 
 .song-banner-photo img {
     object-fit: cover;
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
 

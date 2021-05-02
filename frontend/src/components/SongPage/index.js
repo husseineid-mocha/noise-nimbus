@@ -13,6 +13,7 @@ import {
 import "./songpage.css";
 
 function SongPage(props) {
+  console.log(props.match.params.id);
   const [comment, setComment] = useState("");
   const isLoaded = props.isLoaded;
   const dispatch = useDispatch();
@@ -26,13 +27,13 @@ function SongPage(props) {
     a.updatedAt > b.updatedAt ? -1 : 1
   );
 
-  const [trackIndex, setTrackIndex] = useState(1);
-  const { id } = useParams();
+  let { id } = useParams();
   // console.log(trackIndex);
-  useEffect(() => {
-    setTrackIndex(id - 1);
-  }, []);
+  // useEffect(() => {
+  //   setTrackIndex(id - 1);
+  // }, []);
 
+  const [trackIndex, setTrackIndex] = useState(id - 1);
   useEffect(() => {}, []);
 
   useEffect(() => {

@@ -57,7 +57,7 @@ function Upload({ isLoaded }) {
     console.log(track);
 
     const songDispatch = await dispatch(addNewSong(track));
-    dispatch(songs());
+    // dispatch(songs());
     history.push(`/song/${songDispatch.newSong.id}`);
 
     setClicked(true);
