@@ -24,7 +24,7 @@ const MusicPlayer3 = ({ trackIndex, setTrackIndex }) => {
   //   audioFile = tracks[trackIndex].audioFile;
   // }
 
-  let selectedSong = tracks.find((track) => track.id === trackIndex);
+  let selectedSong = tracks.find((track) => track.id === trackIndex + 1);
 
   const { title, artistName, image, audioFile } = selectedSong;
 

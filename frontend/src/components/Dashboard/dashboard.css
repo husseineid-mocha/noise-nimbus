@@ -23,6 +23,9 @@
     border-right: 1px solid #f2f2f2;
     padding-top: 32px;
     padding-right: 30px;
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
 }
 
 .dashboard-content {
@@ -72,6 +75,18 @@
     outline: 0;
 }
 
+.more-of-what-you-like-button2 {
+    background: transparent;
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    /* border-top: 1px solid black; */
+}
+
+.more-of-what-you-like-button2:focus {
+    outline: 0;
+}
+
 .weekly-photo {
     height: 180px;
     width: 180px;
@@ -88,7 +103,21 @@
     overflow: auto;
 }
 
+.weekly-song-list2 {
+    margin: 20px 0px 20px 20px;
+    width: auto;
+    height: 90%;
+    overflow: auto;
+}
+
 .weekly-song-list::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+.weekly-song-list2::-webkit-scrollbar {
     width: 0px;
     /* Remove scrollbar space */
     background: transparent;
@@ -139,6 +168,15 @@ ul.small-tile-container {
     display: flex;
     padding: 6px;
     color: #ccc;
+    font-weight: 700;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.small-list2 {
+    display: flex;
+    padding: 6px;
+    color: black;
     font-weight: 700;
     align-items: center;
     justify-content: space-between;

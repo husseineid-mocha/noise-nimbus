@@ -26,7 +26,7 @@ function SongPage(props) {
     a.updatedAt > b.updatedAt ? -1 : 1
   );
 
-  const [trackIndex, setTrackIndex] = useState(0);
+  const [trackIndex, setTrackIndex] = useState(1);
   const { id } = useParams();
   // console.log(trackIndex);
   useEffect(() => {

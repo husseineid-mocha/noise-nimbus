@@ -16,7 +16,14 @@ function Dashboard({ isLoaded }) {
   let allSongs = useSelector((state) => state?.song?.songs);
   console.log(allSongs);
   const song = useSelector((state) => state.song.currentSong);
-  console.log(allSongs);
+
+  // let allSongs2 = [];
+
+  // for (let i = (allSongs.length = 1); i >= 0; i--) {
+  //   allSongs2.push(allSongs[i]);
+  // }
+  // // let allSongs2 = allSongs.reverse();
+  // console.log(allSongs2);
 
   useEffect(() => {
     dispatch(songs());
@@ -155,6 +162,35 @@ function Dashboard({ isLoaded }) {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="dashboard-sub">
+          <div className="weekly-song-list2">
+            <h2>All Songs</h2>
+            <p>See your uploaded songs side by side the most popular music</p>
+            {allSongs
+              ? allSongs.map((song, idx) => (
+                  <button
+                    className="more-of-what-you-like-button2"
+                    onClick={() => handleClick(idx)}
+                  >
+                    <div className="small-list2">
+                      <div className="small-image-and-title">
+                        <Link to={`/song/${song.id}`}>
+                          <img
+                            className="small-tile-image"
+                            src={song.image}
+                          ></img>
+                        </Link>
+                        <p className="song-title">
+                          {song.title} by {song.artistName}
+                        </p>
+                      </div>
+                    </div>
+                  </button>
+                ))
+              : null}
           </div>
         </div>
       </div>
