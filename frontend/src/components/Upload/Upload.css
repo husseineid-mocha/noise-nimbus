@@ -1,13 +1,116 @@
 .uploadFormContainer {
-    height: 1000px;
-    width: 100%;
-    margin-top: 65px;
+    font-family: "Open Sans", sans-serif;
+    height: 450px;
+    /* width: 49%; */
+    margin-top: 165px;
     position: relative;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 form.uploadForm {
     display: flex;
     flex-direction: column;
+    background: white;
+    width: 400px;
+    /* height: 500px; */
+    margin: 0 auto;
+    top: 8%;
+    padding: 15px;
+    animation-name: scrolldown;
+    animation-duration: 0.5s;
+}
+
+label.uploadTextLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+label.uploadDescriptionLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+label.uploadArtistNameLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+label.uploadGenreLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+label.uploadImageLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+label.uploadAudioFileLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: 400;
+    margin: 10px 0px;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+label input {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 7px 8px;
+    border-radius: 5px;
+    width: 250px;
+    /* margin-bottom: 20px; */
+    border: 1px solid #ccc;
+}
+
+label textarea {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 7px 8px;
+    border-radius: 5px;
+    width: 250px;
+    /* margin-bottom: 20px; */
+    border: 1px solid #ccc;
+}
+
+select.uploadGenre {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 7px 8px;
+    border-radius: 5px;
+    width: 267px;
+    /* margin-bottom: 20px; */
+    border: 1px solid #ccc;
+}
+
+button.uploadSubmitButton {
+    background: rgb(207, 0, 114);
+    color: white;
+    border: 1px solid rgb(207, 0, 114);
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px 15px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.formTitle {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+}
+
+.uploadSubmit {
+    text-align: center;
+    margin-top: 15px;
 }

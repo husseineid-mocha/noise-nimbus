@@ -45,8 +45,21 @@
     height: 29px;
 }
 
+.dashboard-sub h1 {
+    font-size: 21px;
+    height: 29px;
+}
+
 .dashboard-content>p {
     margin-top: 3px;
+    height: 19px;
+    font-size: 14px;
+    color: gray;
+}
+
+.subPTag {
+    margin-top: 3px;
+    margin-bottom: 21px;
     height: 19px;
     font-size: 14px;
     color: gray;
@@ -80,6 +93,7 @@
     border: none;
     border-top: 1px solid #ccc;
     width: 100%;
+    padding: 3px;
     /* border-top: 1px solid black; */
 }
 
@@ -104,7 +118,7 @@
 }
 
 .weekly-song-list2 {
-    margin: 20px 0px 20px 20px;
+    margin: 0px 0px 20px 20px;
     width: auto;
     height: 90%;
     overflow: auto;
@@ -176,7 +190,7 @@ ul.small-tile-container {
 .small-list2 {
     display: flex;
     padding: 6px;
-    color: black;
+    color: #ccc;
     font-weight: 700;
     align-items: center;
     justify-content: space-between;
@@ -219,4 +233,15 @@ button.play-button {
 
 .musicPlayerFooter {
     display: none;
+}
+
+.dashboard-sub-container {
+    background: linear-gradient(45deg, #cf0072 0%, #8b61a8 100%);
+    padding: 20px;
+    height: 90%;
+}
+
+.dashboard-sub {
+    padding-top: 32px;
+    /* padding-right: 30px; */
 }

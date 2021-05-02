@@ -167,30 +167,34 @@ function Dashboard({ isLoaded }) {
 
         <div className="dashboard-sub">
           <div className="weekly-song-list2">
-            <h2>All Songs</h2>
-            <p>See your uploaded songs side by side the most popular music</p>
-            {allSongs
-              ? allSongs.map((song, idx) => (
-                  <button
-                    className="more-of-what-you-like-button2"
-                    onClick={() => handleClick(idx)}
-                  >
-                    <div className="small-list2">
-                      <div className="small-image-and-title">
-                        <Link to={`/song/${song.id}`}>
-                          <img
-                            className="small-tile-image"
-                            src={song.image}
-                          ></img>
-                        </Link>
-                        <p className="song-title">
-                          {song.title} by {song.artistName}
-                        </p>
+            <h1>All Songs</h1>
+            <p className="subPTag">
+              See your uploaded songs side by side the most popular music
+            </p>
+            <div className="dashboard-sub-container">
+              {allSongs
+                ? allSongs.map((song, idx) => (
+                    <button
+                      className="more-of-what-you-like-button2"
+                      onClick={() => handleClick(idx)}
+                    >
+                      <div className="small-list2">
+                        <div className="small-image-and-title">
+                          <Link to={`/song/${song.id}`}>
+                            <img
+                              className="small-tile-image"
+                              src={song.image}
+                            ></img>
+                          </Link>
+                          <p className="song-title">
+                            {song.title} by {song.artistName}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </button>
-                ))
-              : null}
+                    </button>
+                  ))
+                : null}
+            </div>
           </div>
         </div>
       </div>

@@ -75,6 +75,7 @@ function Upload({ isLoaded }) {
       </div>
       <div className="uploadFormContainer">
         <form onSubmit={(e) => handleSubmit(e)} className="uploadForm">
+          <div className="formTitle">Upload Your Favorite Song Below!</div>
           <label className="uploadTextLabel">
             Title
             <input
