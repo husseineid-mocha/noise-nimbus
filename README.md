@@ -69,7 +69,7 @@ NoiseNimbus, a SoundCloud clone, is a music sharing platform where anyone, from 
 The app was built using a combination of express and sequelize with a PostgreSQL database. The backend structure is RESTful API. Model associations are used to minimize database queries to the backend, assuring speed and reliability.
 
 ### Front End
-The frontend was built with React/Redux. By utilizing React and Redux state, WhatsAppening is a seamless, single-page aplication. All page interactions are controlled by the React/Redux state.
+The frontend was built with React/Redux. By utilizing React and Redux state, NoiseNimbus is a seamless, single-page aplication. All page interactions are controlled by the React/Redux state.
 ### Built With
 
 * [React](https://reactjs.org/)
