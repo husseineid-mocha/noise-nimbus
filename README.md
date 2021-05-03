@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://noisenimbus.herokuapp.com/">
-    <img src="./READMEImages/soundcloud-512.png" alt="Logo" style='width: 100px; height: 100px;'>
+    <img src="./READMEImages/logo.png" alt="Logo" style='width: 100px; height: 100px;'>
   </a>
 
   <h3 align="center">NoiseNimbus</h3>
