@@ -19,7 +19,6 @@ function Splash({ isLoaded }) {
   const [showModal, setShowModal] = useState(false);
   const sessionUser = useSelector((state) => state.session.user);
   const songsState = useSelector((state) => state.song.songs);
-  // console.log(songsState);
 
   useEffect(() => {
     if (sessionUser) {
@@ -97,7 +96,7 @@ function Splash({ isLoaded }) {
           <h3>Hear what's trending in the NoiseNimbus community</h3>
           <div>
             <div className="splash-trending-tracks">
-              {songsState.map((song) => (
+              {songsState.slice(0, 12).map((song) => (
                 <SongsContainer key={song.id} song={song} />
               ))}
             </div>
