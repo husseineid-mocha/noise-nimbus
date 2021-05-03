@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://noisenimbus.herokuapp.com/">
-    <img src="./READMEImages/soundcloud-512.png" alt="Logo" style="background-color:white">
+    <img src="./READMEImages/soundcloud-512.png" alt="Logo" style='width: 100px; height: 100px;'>
   </a>
 
   <h3 align="center">NoiseNimbus</h3>
@@ -38,7 +38,7 @@ NoiseNimbus, a SoundCloud clone, is a music sharing platform where anyone, from 
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#overall-structure">Overall Structure</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -62,12 +62,6 @@ NoiseNimbus, a SoundCloud clone, is a music sharing platform where anyone, from 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
-[Click here to view FulcrumPhysio live on the web!](https://fulcrumphysio.herokuapp.com/)
-<br>
-</br>
-![homepage-screenshot](READMEImages/splash.png)
 
 ## Overall Structure
 
