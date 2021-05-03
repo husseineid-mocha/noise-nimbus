@@ -22,5 +22,8 @@
     "bugs": {
         "url": "https://github.com/husseineid-mocha/nimbus/issues"
     },
-    "homepage": "https://github.com/husseineid-mocha/nimbus#readme"
+    "homepage": "https://github.com/husseineid-mocha/nimbus#readme",
+    "dependencies": {
+        "sequelize": "^6.6.2"
+    }
 }
