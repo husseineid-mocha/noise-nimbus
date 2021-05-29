@@ -9,7 +9,6 @@ router.get(
   "/",
   asyncHandler(async (req, res) => {
     const comments = await Comment.findAll();
-    console.log("XXXXXXXXX", comments);
     return res.json({
       comments,
     });
@@ -21,7 +20,6 @@ router.post(
   asyncHandler(async (req, res) => {
     const songId = req.params.id;
     const { payload } = req.body;
-    // console.log("PAAAAAAYLOOOOOAAAAD", payload.comment, payload.userId);
 
     let comment = await Comment.create({
       body: payload.comment,

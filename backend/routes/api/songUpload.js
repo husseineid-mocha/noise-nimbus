@@ -10,7 +10,6 @@ router.post(
   "/",
   singleMulterUpload("audio"),
   asyncHandler(async (req, res) => {
-    console.log("XZXXXXXXXXXXXXXXXXXXXXXXX", req.body);
     const { title, description, image, artistName, genreId } = req.body;
 
     const audioFile = await singlePublicFileUpload(req.file);

@@ -50,8 +50,6 @@ export const addNewSong = (song) => async (dispatch) => {
   formData.append("genreId", genreId);
   formData.append("audio", audioFile);
 
-  console.log(formData);
-
   const res = await csrfFetch("/api/songUpload", {
     method: "POST",
     headers: {
@@ -63,7 +61,6 @@ export const addNewSong = (song) => async (dispatch) => {
 
   dispatch(addSong(data));
   await dispatch(songs());
-  // console.log(data);
 
   return data;
 };

@@ -8,12 +8,10 @@ export default function Comment(props) {
 
   const userId = useSelector((state) => state.session.user.id);
   const userName = useSelector((state) => state.session.user.username);
-  // console.log(props);
 
   const canDelete = userId === props.userId;
 
   return (
-    // props.User.username && (
     <div className="comment-item-body">
       <div className="comment-nameAndBody">
         <div className="comment-userName">{props.User?.username}</div>
@@ -24,7 +22,7 @@ export default function Comment(props) {
           className="delete-button"
           onClick={() => dispatch(deleteAComment(props.id))}
         >
-          <i class="fas fa-trash-alt fa-lg"></i>
+          <i className="fas fa-trash-alt fa-lg"></i>
         </div>
       )}
     </div>

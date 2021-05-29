@@ -13,7 +13,6 @@ import {
 import "./songpage.css";
 
 function SongPage(props) {
-  console.log(props.match.params.id);
   const [comment, setComment] = useState("");
   const isLoaded = props.isLoaded;
   const dispatch = useDispatch();
@@ -28,10 +27,6 @@ function SongPage(props) {
   );
 
   let { id } = useParams();
-  // console.log(trackIndex);
-  // useEffect(() => {
-  //   setTrackIndex(id - 1);
-  // }, []);
 
   const [trackIndex, setTrackIndex] = useState(id - 1);
   useEffect(() => {}, []);
@@ -40,7 +35,6 @@ function SongPage(props) {
     dispatch(getSongComments(props.match.params.id));
   }, []);
 
-  // console.log(sessionUser);
   useEffect(() => {
     dispatch(singleSong(props.match.params.id));
   }, []);
@@ -51,7 +45,6 @@ function SongPage(props) {
       userId: sessionUser.id,
       comment: comment,
     };
-    // console.log(song.id);
     dispatch(createComment(payload, song.id));
     setComment("");
   };

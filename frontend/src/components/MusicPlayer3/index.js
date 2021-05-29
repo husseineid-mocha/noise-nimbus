@@ -6,44 +6,16 @@ import "./MusicPlayer3.css";
 
 const MusicPlayer3 = ({ trackIndex, setTrackIndex }) => {
   //this is not the index it's the ID
-  debugger;
 
   let tracks = useSelector((state) => state?.song?.songs);
-  console.log(tracks);
-  console.log(trackIndex);
+
   const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [vol, setVol] = useState(1);
 
-  // const [songs, setSongs] = useState([]);
-  // useEffect(() => {
-  //   async function fetchSongs() {
-  //     const res = await fetch(`/api/songs`);
-  //     const data = await res.json();
-  //     if (res.ok) setSongs(data);
-  //   }
-  //   fetchSongs();
-  // }, []);
-  // // let officialSong = songs.songs;
-
-  // console.log(songs);
-
-  // let title, artistName, image, audioFile;
-
-  // if (tracks[trackIndex]) {
-  //   title = tracks[trackIndex].title;
-  //   artistName = tracks[trackIndex].artistName;
-  //   image = tracks[trackIndex].image;
-  //   audioFile = tracks[trackIndex].audioFile;
-  // }
-
   let selectedSong = tracks.find((track) => track.id === trackIndex + 1);
 
-  // if (!selectedSong) return null;
-
   const { title, artistName, image, audioFile } = selectedSong;
-
-  console.log("XZXXXXXXXXXXXXXXXXXXXXXXX", trackIndex, title, audioFile);
 
   const audioRef = useRef(new Audio(audioFile));
   const intervalRef = useRef();

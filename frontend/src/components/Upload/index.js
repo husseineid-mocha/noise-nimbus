@@ -15,9 +15,6 @@ function Upload({ isLoaded }) {
   let genres = useSelector((state) => state?.genre?.genres?.genres);
   const songList = useSelector((state) => state.song.songs);
   const newSong = useSelector((state) => state.song.newSong);
-  console.log(newSong);
-  console.log(songList[songList.length - 1]);
-  // console.log(songs[songs.length - 1].id);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -54,7 +51,6 @@ function Upload({ isLoaded }) {
       userId: sessionUser.id,
       genreId,
     };
-    console.log(track);
 
     const songDispatch = await dispatch(addNewSong(track));
     // dispatch(songs());

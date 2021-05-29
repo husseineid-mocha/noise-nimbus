@@ -14,24 +14,13 @@ function Dashboard({ isLoaded }) {
 
   const activeIndex = useSelector((state) => state.song.activeSongId);
   let allSongs = useSelector((state) => state?.song?.songs);
-  console.log(allSongs);
   const song = useSelector((state) => state.song.currentSong);
-
-  // let allSongs2 = [];
-
-  // for (let i = (allSongs.length = 1); i >= 0; i--) {
-  //   allSongs2.push(allSongs[i]);
-  // }
-  // // let allSongs2 = allSongs.reverse();
-  // console.log(allSongs2);
 
   useEffect(() => {
     dispatch(songs());
-    // dispatch(singleSong(song.id));
   }, []);
 
   useEffect(() => dispatch(singleSong(1)), []);
-  // console.log(songsState);
 
   const handleClick = (idx) => {
     if (document.querySelector(".musicPlayerFooter")) {
@@ -112,7 +101,6 @@ function Dashboard({ isLoaded }) {
             <h1>Charts: Top 10</h1>
             <p>The latest hits, updated all the time</p>
             <div className="dashboard-top">
-              {/* {console.log("FLLLLLAAAAAAAGGGGGG", allSongs)} */}
               {allSongs
                 ? allSongs.map((song, idx) => (
                     <div>

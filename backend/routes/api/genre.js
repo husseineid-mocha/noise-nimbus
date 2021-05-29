@@ -10,7 +10,6 @@ router.get(
   "/",
   asyncHandler(async (req, res) => {
     const genres = await Genre.findAll();
-    // console.log(res.json({ genres }));
 
     return res.json({ genres });
   })

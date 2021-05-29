@@ -20,7 +20,7 @@ module.exports = {
       ];
 
       for (let i = 1; i <= 5; i++) {
-        let userId = Math.round(Math.random() * 5);
+        let userId = Math.round(Math.random() * 4 + 1);
         for (let j = 1; j <= 13; j++) {
           comments.push({
             body: data[Math.round(Math.random() * 10)],

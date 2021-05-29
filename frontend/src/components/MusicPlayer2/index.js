@@ -5,13 +5,7 @@ import Controls from "./Controls";
 import "./MusicPlayer2.css";
 
 const MusicPlayer2 = ({ trackIndex, setTrackIndex }) => {
-  //   debugger;
-  //   const tracks = useSelector((state) => state?.song?.songs);
-  //   console.log(tracks);
-
-  //   const [trackIndex, setTrackIndex] = useState(0);
   let tracks = useSelector((state) => state?.song?.songs);
-  console.log(tracks);
 
   const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -33,7 +27,6 @@ const MusicPlayer2 = ({ trackIndex, setTrackIndex }) => {
   };
 
   const toNextTrack = () => {
-    console.log("hello");
     if (trackIndex < tracks.length - 1) {
       setTrackIndex(trackIndex + 1);
     } else {

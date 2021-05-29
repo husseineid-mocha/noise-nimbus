@@ -9,7 +9,6 @@ router.get(
   "/:id",
   csrfProtection,
   asyncHandler(async (req, res) => {
-    console.log("LAAAABEL", req.params);
     const song = await Song.findByPk(req.params.id);
     return res.json({
       song,
