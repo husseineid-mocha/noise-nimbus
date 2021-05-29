@@ -77,7 +77,6 @@ The frontend was built with React/Redux. By utilizing React and Redux state, Noi
 * [JavaScript](https://www.javascript.com/)
 * [Sequelize](https://sequelize.org/)
 * [PostgreSQL](https://www.postgresql.org/docs/current/)
-* [SocketIO](https://socket.io/docs/v4)
 * [CSS](http://www.css3.info/)
 
 <!-- GETTING STARTED -->
